@@ -4,10 +4,10 @@ require_relative './modular_forms/eisenstein_series'
 
 # ModularForms
 #
-# This module provides functionality for working with modular forms, a class of
-# complex functions that are invariant under the action of a modular group.
-# The module is useful in number theory and can be applied
-# in areas such as creating musical patterns in Sonic Pi.
+# This module provides tools for working with modular forms, complex, analytic functions invariant
+# under the action of a modular group, with deep connections to number theory. It enables the calculation
+# of coefficients and is well-suited for applications in Sonic Pi, particularly for algorithmic music composition
+# and live coding.
 module ModularForms
   module_function
 
