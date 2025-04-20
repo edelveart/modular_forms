@@ -10,7 +10,7 @@ module ModularForms
   # calculate coefficients and is suitable for applications in Sonic Pi.
   module EisensteinSeries
     def self.eisenstein_modular_form(k)
-      raise 'k must be even >= 2' if k < 2 || k % 2 != 0 # rubocop:disable Style/EvenOdd
+      raise ArgumentError, 'k must be even and >= 2' if k < 2 || k % 2 != 0 # rubocop:disable Style/EvenOdd
 
       bernoulli_k = NumericHelpers.bernoulli_numbers_arr(k)[k]
       factor_normalization = - Rational(2 * k, bernoulli_k)
