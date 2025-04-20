@@ -2,8 +2,8 @@
 
 # NumericHelpers
 #
-# Contains functions for generating modular forms and performing
-# other numerical operations.
+# Contains functions used in the definitions of modular forms,
+# as well as other related numerical operations.
 module NumericHelpers
   def self.factorial_iter(num)
     t = 1
