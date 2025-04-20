@@ -23,7 +23,7 @@ module NumericHelpers
     (bernoulli_numbers.length..n).each do |k|
       sum = Rational(0, 1)
       (0...k).each do |j|
-        sum += binomial(k + 1, j) * bernoulli_numbers[j]
+        sum += binomial_coefficient(k + 1, j) * bernoulli_numbers[j]
       end
       bernoulli_numbers[k] = -sum / (k + 1)
     end
