@@ -2,6 +2,8 @@
 
 Integrate the deep mathematical symmetry of `Modular Forms` into the realm of algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
 
+![Modular Forms - Image](modular_forms.png)
+
 ## Features
 
 - **Accessibility for musicians and coders**: No need for a heavy mathematical background—explore the beauty of modular forms through music.
