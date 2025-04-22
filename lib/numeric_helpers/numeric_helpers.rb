@@ -40,5 +40,24 @@ module ModularForms
       end
       total_sum
     end
+
+    def self.prime_number?(n)
+      return false if n < 2
+
+      (2..Math.sqrt(n)).each do |i|
+        if (n % i) == 0 # rubocop:disable Style/NumericPredicate,Style/IfUnlessModifier
+          return false
+        end
+      end
+      true
+    end
+
+    def self.galois_field(n, modp)
+      if prime_number?(modp) == false # rubocop:disable Style/IfUnlessModifier
+        raise ArgumentError, 'GF must be a prime number'
+      end
+
+      ((n % modp) + modp) % modp
+    end
   end
 end
