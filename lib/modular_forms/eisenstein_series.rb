@@ -5,9 +5,7 @@ require_relative '../../lib/numeric_helpers/numeric_helpers'
 module ModularForms
   # ModularForms::EisensteinSeries
   #
-  # This module provides a generator for Eisenstein series, modular functions
-  # that are invariant under modular group transformations. It can be used to
-  # calculate coefficients and is suitable for applications in Sonic Pi.
+  # This module provides a generator for Eisenstein series.
   module EisensteinSeries
     def self.eisenstein_modular_form(k, gal_f = nil) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       raise ArgumentError, 'k must be even and >= 2' if k < 2 || k % 2 != 0 # rubocop:disable Style/EvenOdd
