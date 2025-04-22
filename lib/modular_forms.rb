@@ -11,7 +11,7 @@ require_relative './modular_forms/eisenstein_series'
 module ModularForms
   module_function
 
-  def eisenstein_series(k_weight)
-    EisensteinSeries.eisenstein_modular_form(k_weight)
+  def eisenstein_series(weight_k, gal_f = nil)
+    EisensteinSeries.eisenstein_modular_form(weight_k, gal_f)
   end
 end
