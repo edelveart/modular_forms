@@ -42,6 +42,9 @@ module ModularForms
     end
 
     def self.prime_number?(n)
+      if !n.is_a?(Integer) # rubocop:disable Style/IfUnlessModifier,Style/NegatedIf
+        return false
+      end
       return false if n < 2
 
       (2..Math.sqrt(n)).each do |i|
