@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+require_relative '../numeric_helpers/numeric_helpers'
+
 module ModularForms
-  # ModularForms::EtaFunctions
+  # ModularForms::DedekindEtaFunctions
   #
   # This module provides a generator for Dedekind eta functions.
   module DedekindEtaFunctions
@@ -23,6 +25,15 @@ module ModularForms
           end
         end
       end
+    end
+
+    def self.eta_function_power(power, precision)
+      vec = eta_function.take(precision)
+      eta_q_coefs = [1]
+      power.times do
+        eta_q_coefs = NumericHelpers.linear_convolve(eta_q_coefs, vec, precision)
+      end
+      eta_q_coefs
     end
   end
 end
