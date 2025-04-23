@@ -12,8 +12,12 @@ require_relative './modular_forms/dedekind_eta_functions'
 module ModularForms
   module_function
 
-  def eisenstein_series(weight_k, gal_f = nil)
-    EisensteinSeries.eisenstein_modular_form(weight_k, gal_f)
+  def eisenstein_serie(weight_k, gal_f = nil)
+    EisensteinSeries.eisenstein_series(weight_k, gal_f)
+  end
+
+  def eisenstein_series_product(weight_k1, weight_k2, precision)
+    EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, precision)
   end
 
   def dedekind_eta_function(pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
