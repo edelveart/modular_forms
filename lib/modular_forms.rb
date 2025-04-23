@@ -23,4 +23,8 @@ module ModularForms
   def dedekind_eta_function(pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
     DedekindEtaFunctions.eta_function(pentagonal_coefs)
   end
+
+  def dedekind_eta_power(power, precision)
+    DedekindEtaFunctions.eta_function_power(power, precision)
+  end
 end

@@ -66,10 +66,10 @@ module ModularForms
     def self.linear_convolve(vec1, vec2, max_degree = nil) # rubocop:disable Metrics/AbcSize
       max_degree == nil ? max_degree = (vec1.size + vec2.size) / 2 : max_degree # rubocop:disable Style/NilComparison
       arr_product = Array.new(max_degree, 0)
-      (0..max_degree - 1).each do |i|
-        (0..i).each do |j|
-          if j < vec1.size && (i - j) < vec2.size # rubocop:disable Style/IfUnlessModifier
-            arr_product[i] += vec1[j] * vec2[i - j]
+      (0..max_degree - 1).each do |n|
+        (0..n).each do |m|
+          if m < vec1.size && (n - m) < vec2.size # rubocop:disable Style/IfUnlessModifier
+            arr_product[n] += vec1[m] * vec2[n - m]
           end
         end
       end
