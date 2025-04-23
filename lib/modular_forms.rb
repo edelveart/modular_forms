@@ -2,6 +2,7 @@
 
 require_relative './modular_forms/eisenstein_series'
 require_relative './modular_forms/dedekind_eta_functions'
+require_relative './modular_forms/ramanujan_tau_function'
 
 # ModularForms
 #
@@ -26,5 +27,9 @@ module ModularForms
 
   def dedekind_eta_power(power, precision)
     DedekindEtaFunctions.eta_function_power(power, precision)
+  end
+
+  def ramanujan_tau_function
+    RamanujanTauFunction.niebur_sigma_formula
   end
 end
