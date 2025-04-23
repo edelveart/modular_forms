@@ -3,13 +3,14 @@
 require_relative './modular_forms/eisenstein_series'
 require_relative './modular_forms/dedekind_eta_functions'
 require_relative './modular_forms/ramanujan_tau_function'
+require_relative './modular_forms/theta_functions'
 
 # ModularForms
 #
 # This module provides tools for working with modular forms, complex, analytic functions invariant
-# under the action of a modular group, with deep connections to number theory. It enables the calculation
-# of coefficients and is well-suited for applications in Sonic Pi, particularly for algorithmic music composition
-# and live coding.
+# under the action of a modular group, with deep connections to number theory.
+# It enables the calculation of coefficients and is well-suited for applications in Sonic Pi,
+# particularly for algorithmic music composition and live coding.
 module ModularForms
   module_function
 
@@ -31,5 +32,13 @@ module ModularForms
 
   def ramanujan_tau_function
     RamanujanTauFunction.niebur_sigma_formula
+  end
+
+  def jacobi_theta_function(jacobi_index = 3, square_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
+    ThetaFunctions.jacobi_theta_function(jacobi_index, square_coefs)
+  end
+
+  def jacobi_theta_power(jacobi_index, power, precision)
+    ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, precision)
   end
 end
