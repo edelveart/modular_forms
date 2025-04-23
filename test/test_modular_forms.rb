@@ -23,7 +23,7 @@ class TestModularForms < Minitest::Test
 
   def test_eisenstein_series
     EISENSTEIN_SERIES_EXPECTED.each do |weight, expected|
-      actual = ModularForms.eisenstein_series(weight).take(20)
+      actual = ModularForms.eisenstein_serie(weight).take(20)
       assert_equal(expected, actual, "Failed for weight k = #{weight}")
     end
   end
@@ -31,7 +31,7 @@ class TestModularForms < Minitest::Test
   def test_eisenstein_series_gal_f
     gal_f_by_weight = { 6 => 5, 8 => 17, 114 => 97 }
     EISENSTEIN_SERIES_EXPECTED_GAL_F.each do |weight, expected|
-      actual = ModularForms.eisenstein_series(weight, gal_f_by_weight[weight]).take(20)
+      actual = ModularForms.eisenstein_serie(weight, gal_f_by_weight[weight]).take(20)
       assert_equal(expected, actual, "Failed for weight k = #{weight}")
     end
   end
@@ -41,7 +41,7 @@ class TestModularForms < Minitest::Test
 
     invalid_values.each do |invalid_k|
       assert_raises(ArgumentError, "Expected error for invalid k = #{invalid_k}") do
-        ModularForms.eisenstein_series(invalid_k).take(5)
+        ModularForms.eisenstein_serie(invalid_k).take(5)
       end
     end
   end
@@ -51,7 +51,7 @@ class TestModularForms < Minitest::Test
 
     invalid_gal_f.each do |invalid_val|
       assert_raises(ArgumentError, "GF must be a prime number = #{invalid_val}") do
-        ModularForms.eisenstein_series(6, invalid_val).take(5)
+        ModularForms.eisenstein_serie(6, invalid_val).take(5)
       end
     end
   end
