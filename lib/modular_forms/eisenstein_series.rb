@@ -7,7 +7,7 @@ module ModularForms
   #
   # This module provides a generator for Eisenstein series.
   module EisensteinSeries
-    def self.eisenstein_modular_form(k, gal_f = nil) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
+    def self.eisenstein_serie(k, gal_f = nil) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       raise ArgumentError, 'k must be even and >= 2' if k < 2 || k % 2 != 0 # rubocop:disable Style/EvenOdd
 
       bernoulli_k = NumericHelpers.bernoulli_numbers_arr(k)[k]
