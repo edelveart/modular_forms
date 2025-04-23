@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative './modular_forms/eisenstein_series'
+require_relative './modular_forms/dedekind_eta_functions'
 
 # ModularForms
 #
@@ -13,5 +14,9 @@ module ModularForms
 
   def eisenstein_series(weight_k, gal_f = nil)
     EisensteinSeries.eisenstein_modular_form(weight_k, gal_f)
+  end
+
+  def dedekind_eta_function(pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
+    DedekindEtaFunctions.eta_function(pentagonal_coefs)
   end
 end
