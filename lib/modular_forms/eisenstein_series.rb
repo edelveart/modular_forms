@@ -24,5 +24,11 @@ module ModularForms
         end
       end
     end
+
+    def self.eisenstein_series_product(weight_k1, weight_k2, precision)
+      vec1 = eisenstein_modular_form(weight_k1).take(precision)
+      vec2 = eisenstein_modular_form(weight_k2).take(precision)
+      NumericHelpers.linear_convolve(vec1, vec2)
+    end
   end
 end
