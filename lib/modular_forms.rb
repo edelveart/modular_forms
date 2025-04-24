@@ -4,6 +4,7 @@ require_relative './modular_forms/eisenstein_series'
 require_relative './modular_forms/dedekind_eta_functions'
 require_relative './modular_forms/ramanujan_tau_function'
 require_relative './modular_forms/theta_functions'
+require_relative './modular_forms/klein_j_invariant'
 
 # ModularForms
 #
@@ -44,5 +45,9 @@ module ModularForms
 
   def jacobi_theta_power(jacobi_index, power, precision)
     ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, precision)
+  end
+
+  def j_invariant(precision)
+    KleinJInvariant.modular_j_function(precision)
   end
 end
