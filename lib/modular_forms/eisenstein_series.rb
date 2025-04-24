@@ -30,5 +30,14 @@ module ModularForms
       vec2 = eisenstein_series(weight_k2).take(precision)
       NumericHelpers.linear_convolve(vec1, vec2, precision)
     end
+
+    def self.eisenstein_serie_power(weight_k, power, precision)
+      vec = eisenstein_series(weight_k).take(precision)
+      eisenstein_q_coefs = [1]
+      power.times do
+        eisenstein_q_coefs = NumericHelpers.linear_convolve(eisenstein_q_coefs, vec, precision)
+      end
+      eisenstein_q_coefs
+    end
   end
 end
