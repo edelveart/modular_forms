@@ -46,6 +46,7 @@ end
 6. `ModularForms.ramanujan_tau_function`
 7. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
 8. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
+9. `ModularForms.j_invariant(precision)`
 
 ## Purpose and Focus
 
