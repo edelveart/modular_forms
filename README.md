@@ -7,8 +7,17 @@ Explore the deep mathematical symmetries of `Modular Forms` in the realm of algo
 ## Features
 
 - **Accessibility for musicians and coders**: No need for a heavy mathematical background—explore the beauty of modular forms through music.
-- **Interactive Educational Tool**: Use Sonic Pi to teach number theory concepts in an engaging, hands-on way. Let students experiment with live coding and experience the immediate connection between mathematics and music.
+- **Interactive Educational Tool**: Use **Sonic Pi** to teach number theory concepts in an engaging, hands-on way. Allow students to experiment with live coding and experience the immediate connection between mathematics and music.
 - **Mathematical Sound Design**: Generate complex musical patterns, rhythms, timbres, and harmonies based on modular forms, seamlessly blending math and music. Explore the evolution of modular forms through algorithmic manipulation.
+
+## Purpose and Focus
+
+`modular_forms` is designed to transform advanced mathematical functions into a creative tool for composition and live performance in **Sonic Pi**. One of its main goals is to enable musicians, developers, and educators to harness the rich structures of modular forms for **sonic exploration** and **musical improvisation**.
+
+- **Not optimized for high performance**: This library is not intended to provide maximum efficiency or to replace advanced mathematical software specialized in modular forms computations.
+- **Normalized modular functions**: Several of these modular functions are normalized, ensuring consistent and standard q-expansions for musical and mathematical applications.
+
+However, this does not exclude the possibility of discovering interesting mathematical insights through **playful experimentation**. As you engage with the gem, you may uncover **new ideas** and patterns that seamlessly blend mathematical beauty with musical creativity.
 
 ## Installation
 
@@ -47,9 +56,3 @@ end
 7. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
 8. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
 9. `ModularForms.j_invariant(precision)`
-
-## Purpose and Focus
-
-> `modular_forms` is designed to transform complex mathematical functions into a creative tool for composition and live performance. While it provides **accurate** and **precise** implementations of these functions, its primary focus is on sonic exploration and musical improvisation rather than theoretical analysis.
->
->  However, this doesn’t exclude the possibility of discovering interesting mathematical insights through **playful experimentation**. As you engage with the gem, you may uncover **new ideas** and patterns that seamlessly blend mathematical beauty with musical creativity.
