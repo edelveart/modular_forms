@@ -40,11 +40,12 @@ end
 <!-- Normalized -->
 1. `ModularForms.eisenstein_serie(weight_k, galois_field = nil)`
 2. `ModularForms.eisenstein_series_product(weight_k1, weight_k2, precision)`
-3. `ModularForms.dedekind_eta_function(pentagonal_coefs = false)`
-4. `ModularForms.dedekind_eta_power(power, precision)`
-5. `ModularForms.ramanujan_tau_function`
-6. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
-7. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
+3. `ModularForms.eisenstein_serie_power(weight_k, power, precision)`
+4. `ModularForms.dedekind_eta_function(pentagonal_coefs = false)`
+5. `ModularForms.dedekind_eta_power(power, precision)`
+6. `ModularForms.ramanujan_tau_function`
+7. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
+8. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
 
 ## Purpose and Focus
 
