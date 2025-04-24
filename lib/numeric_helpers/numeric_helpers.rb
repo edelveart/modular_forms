@@ -75,5 +75,17 @@ module ModularForms
       end
       arr_product
     end
+
+    def self.quotient_of_series(num, den, max_degree)
+      arr_coefs = []
+      (0..max_degree).each do |n|
+        sum = num[n] || 0
+        (1..n).each do |k|
+          sum -= (den[k] || 0) * (arr_coefs[n - k] || 0)
+        end
+        arr_coefs << sum / den[0].to_i
+      end
+      arr_coefs
+    end
   end
 end
