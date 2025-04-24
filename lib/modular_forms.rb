@@ -22,6 +22,10 @@ module ModularForms
     EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, precision)
   end
 
+  def eisenstein_serie_power(weight_k, power, precision)
+    EisensteinSeries.eisenstein_serie_power(weight_k, power, precision)
+  end
+
   def dedekind_eta_function(pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
     DedekindEtaFunctions.eta_function(pentagonal_coefs)
   end
