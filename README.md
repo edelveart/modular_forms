@@ -1,23 +1,23 @@
 # Modular forms
 
-Explore a primer on the mathematical symmetries of `Modular Forms` through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
+A primer on Modular Forms and their mathematical symmetries, made into music through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
 
 ![Modular Forms - Image](modular_forms.png)
 
 ## Features
 
-- **Accessibility for musicians and coders**: No need to be a math expert to jump in. Whether you are a musician curious about code or a coder intrigued by sound, this tool lets you explore modular forms in a creative and intuitive way. You will be able to generate musical patterns, rhythms, timbres, and harmonies—playing with math like it were an instrument.
-- **Interactive Educational Tool**: Use **Sonic Pi** to teach number theory concepts in a hands-on, immersive way. Allow students to experiment with live coding, hear math in action, and understand abstract concepts through sound.
+- **Accessible to both musicians and coders**: No need to be a math expert to jump in. Whether you are a musician curious about code or a coder intrigued by sound, this tool lets you explore modular forms in a creative and intuitive way. Create musical patterns, rhythms, timbres, and harmonies while experimenting with mathematical concepts like they were instruments.
+- **Interactive Educational Tool**: Use **Sonic Pi** to teach number theory concepts in a hands-on and immersive way. Allow students to experiment with live coding, hear math in action, and gain insights into abstract concepts through the medium of sound.
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series or Dedekind functions, which are often studied at an introductory level.
-[See the full list below.](#implemented-modular-forms-generators-and-operations)
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series or Dedekind functions, which are often introduced in early number theory courses.
+[See the full list of implemented generators and operations below](#implemented-modular-forms-generators-and-operations)
 
-- **Not optimized for high performance**: This library is not intended to guarantee maximum efficiency or to replace advanced mathematical software.
+- **Not optimized for high performance**: This library is designed for creative exploration rather than maximum computational efficiency. It is not a replacement for advanced mathematical software.
 - **Normalized modular functions**: Several of these modular functions are normalized, ensuring consistent and standard q-expansions for musical applications.
 
-The goal is simple: offer an inviting starting point for those who might not have a strong math background, but still wish to explore, learn, and possibly uncover new ideas.
+The goal is simple: to offer an inviting starting point for those who wish to explore, learn, and possibly uncover new ideas, regardless of their mathematical background.
 
 ## Installation
 
@@ -29,7 +29,7 @@ gem install modular_forms
 
 ## How to use?
 
-You can dive into the beauty of math, both in Ruby and Sonic Pi, creating music in real-time.  Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
+You can dive into the beauty of math, both in Ruby and Sonic Pi, creating music in real-time. Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
 
 ```rb
 require 'modular_forms'
