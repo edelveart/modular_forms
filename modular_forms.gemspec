@@ -5,8 +5,8 @@ require_relative 'lib/modular_forms/version'
 Gem::Specification.new do |s|
   s.name        = 'modular_forms'
   s.version     = ModularForms::VERSION
-  s.summary     = 'Explore a primer on modular forms through creative coding in Sonic Pi.'
-  s.description = 'Modular Forms is an introductory interface for modular form generators, enabling creative algorithms in Sonic Pi.' # rubocop:disable Layout/LineLength
+  s.summary     = 'An introductory toolkit for exploring modular forms through creative coding with Sonic Pi.'
+  s.description = 'ModularForms is an accessible interface for experimenting with modular form symmetries through algorithmic composition and live coding using Sonic Pi.' # rubocop:disable Layout/LineLength
   s.authors     = ['Edgar Armando Delgado Vega']
   s.email       = ['edelve91@gmail.com']
   s.files       = Dir['lib/**/*']
