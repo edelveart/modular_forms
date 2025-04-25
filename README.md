@@ -6,19 +6,18 @@ Explore a primer on the mathematical symmetries of `Modular Forms` through algor
 
 ## Features
 
-- **Accessibility for musicians and coders**: No need for a heavy mathematical background—explore the beauty of modular forms through music.
-- **Interactive Educational Tool**: Use **Sonic Pi** to teach number theory concepts in a hands-on, immersive way. Allow students to experiment with live coding and experience the interplay between mathematical concepts and sound creation.
-- **Mathematical Sound Design**: Generate musical patterns, rhythms, timbres, and harmonies based on modular forms,  seamlessly blending mathematics and music through algorithmic manipulation.
+- **Accessibility for musicians and coders**: No need to be a math expert to jump in. Whether you are a musician curious about code or a coder intrigued by sound, this tool lets you explore modular forms in a creative and intuitive way. You will be able to generate musical patterns, rhythms, timbres, and harmonies—playing with math like it were an instrument.
+- **Interactive Educational Tool**: Use **Sonic Pi** to teach number theory concepts in a hands-on, immersive way. Allow students to experiment with live coding, hear math in action, and understand abstract concepts through sound.
 
 ## Purpose and Scope
 
-This project provides an engaging exploration of modular forms, designed for musicians, developers, and educators interested in the connection between mathematics and music. Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series or Dedekind functions, which are often studied at an introductory level.
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series or Dedekind functions, which are often studied at an introductory level.
 [See the full list below.](#implemented-modular-forms-generators-and-operations)
 
-- **Not optimized for high performance**: This library is not intended to guarantee maximum efficiency or to serve as a replacement for advanced mathematical software specialized in modular form computations.
+- **Not optimized for high performance**: This library is not intended to guarantee maximum efficiency or to replace advanced mathematical software.
 - **Normalized modular functions**: Several of these modular functions are normalized, ensuring consistent and standard q-expansions for musical applications.
 
-The goal is to offer an approachable entry point for those without a deep mathematical background, while maintaining rigor in the use of the functions. However, this does not exclude the possibility of discovering interesting mathematical insights through **playful experimentation**. You may uncover **new ideas** and patterns that seamlessly blend the beauty of mathematics with musical creativity.
+The goal is simple: offer an inviting starting point for those who might not have a strong math background, but still wish to explore, learn, and possibly uncover new ideas.
 
 ## Installation
 
@@ -30,7 +29,7 @@ gem install modular_forms
 
 ## How to use?
 
-You can dive into the beauty of math, both in Ruby and Sonic Pi, creating music in real-time.  Here’s a simple example of how to use **modular_forms** to generate a basic musical pattern:
+You can dive into the beauty of math, both in Ruby and Sonic Pi, creating music in real-time.  Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
 
 ```rb
 require 'modular_forms'
