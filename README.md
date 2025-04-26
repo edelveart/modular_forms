@@ -11,7 +11,7 @@ A primer on Modular Forms and their mathematical symmetries, made into music thr
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series or Dedekind functions, which are often introduced in early number theory courses.
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series, Hecke operators or Dedekind functions, which are often introduced in early number theory courses.
 [See the full list of implemented generators and operations below](#implemented-modular-forms-generators-and-operations)
 
 - **Not optimized for high performance**: This library is designed for creative exploration rather than maximum computational efficiency. It is not a replacement for advanced mathematical software.
@@ -56,3 +56,5 @@ end
 7. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
 8. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
 9. `ModularForms.j_invariant(precision)`
+10. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)`
+11. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)`
