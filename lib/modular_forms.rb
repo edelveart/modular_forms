@@ -5,6 +5,7 @@ require_relative './modular_forms/dedekind_eta_functions'
 require_relative './modular_forms/ramanujan_tau_function'
 require_relative './modular_forms/theta_functions'
 require_relative './modular_forms/klein_j_invariant'
+require_relative './modular_forms/hecke_operators'
 
 # ModularForms
 #
@@ -49,5 +50,13 @@ module ModularForms
 
   def j_invariant(precision)
     KleinJInvariant.modular_j_function(precision)
+  end
+
+  def hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
+    HeckeOperators.hecke_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
+  end
+
+  def hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)
+    HeckeOperators.hecke_prime_cusp(cusp_form_arr, prime, weight_k, precision)
   end
 end
