@@ -11,8 +11,8 @@ A primer on Modular Forms and their mathematical symmetries, made into music thr
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series, Hecke operators or Dedekind functions, which are often introduced in early number theory courses.
-[See the full list of implemented generators and operations below](#implemented-modular-forms-generators-and-operations)
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series, Hecke operators or SL_2(Z) matrices, which are often introduced in early number theory courses.
+[See the full list of implemented generators, matrices, and operations below](#implemented-modular-forms-generators-sl2z-matrices-and-associated-operations)
 
 - **Not optimized for high performance**: This library is designed for creative exploration rather than maximum computational efficiency. It is not a replacement for advanced mathematical software.
 - **Normalized modular functions**: Several of these modular functions are normalized, ensuring consistent and standard q-expansions for musical applications.
@@ -44,7 +44,7 @@ eisenstein_melody = ModularForms.eisenstein_serie(4)
 end
 ```
 
-## Implemented Modular Forms Generators and Operations
+## Implemented Modular Forms Generators, SL2Z matrices, and Associated Operations
 
 <!-- Normalized -->
 1. `ModularForms.eisenstein_serie(weight_k, galois_field = nil)`
@@ -58,3 +58,9 @@ end
 9. `ModularForms.j_invariant(precision)`
 10. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)`
 11. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)`
+12. `ModularForms.gamma0_index(n)`
+13. `ModularForms.t_gen_matrix(n_power)`
+14. `ModularForms.s_gen_matrix(n_power)`
+15. `ModularForms.u_gen_matrix(mod_n)`
+16. `ModularForms.st_gen_matrix(n_power)`
+17. `ModularForms.product_gen_mats(gen_mat_a, gen_mat_b)`
