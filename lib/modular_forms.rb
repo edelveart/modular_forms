@@ -6,6 +6,7 @@ require_relative './modular_forms/ramanujan_tau_function'
 require_relative './modular_forms/theta_functions'
 require_relative './modular_forms/klein_j_invariant'
 require_relative './modular_forms/hecke_operators'
+require_relative './modular_forms/sl2z_groups'
 
 # ModularForms
 #
@@ -58,5 +59,9 @@ module ModularForms
 
   def hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)
     HeckeOperators.hecke_prime_cusp(cusp_form_arr, prime, weight_k, precision)
+  end
+
+  def gamma0_index(n)
+    SL2Zgroups.index_gamma0(n)
   end
 end
