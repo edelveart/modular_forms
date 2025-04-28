@@ -53,5 +53,15 @@ module ModularForms
          gen_mat_a[1][0] * gen_mat_b[0][1] + gen_mat_a[1][1] * gen_mat_b[1][1]]
       ]
     end
+
+    def self.index_gamma0(n)
+      product = 1
+      (2..n).each do |p|
+        if NumericHelpers.prime_number?(p) && n % p == 0 # rubocop:disable Style/NumericPredicate
+          product *= 1 + Rational(1, p)
+        end
+      end
+      (n * product).to_i
+    end
   end
 end
