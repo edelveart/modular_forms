@@ -64,4 +64,8 @@ module ModularForms
   def gamma0_index(n)
     SL2Zgroups.index_gamma0(n)
   end
+
+  def t_matrix_power(n)
+    SL2Zgroups.t_matrix(n)
+  end
 end
