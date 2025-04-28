@@ -68,4 +68,8 @@ module ModularForms
   def t_matrix_power(n)
     SL2Zgroups.t_matrix(n)
   end
+
+  def s_matrix_power(n)
+    SL2Zgroups.s_matrix(n)
+  end
 end
