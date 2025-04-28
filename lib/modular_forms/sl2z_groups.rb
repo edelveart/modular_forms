@@ -40,5 +40,9 @@ module ModularForms
       }
       matrix_st_power_map[n_power % 6]
     end
+
+    def self.u_matrix(n_power_mod)
+      [[1, 0], [n_power_mod, 1]]
+    end
   end
 end
