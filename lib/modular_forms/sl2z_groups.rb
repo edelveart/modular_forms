@@ -18,5 +18,15 @@ module ModularForms
     def self.t_matrix(n_power)
       [[1, n_power], [0, 1]]
     end
+
+    def self.s_matrix(n_power)
+      matrix_s_power_map = {
+        1 => S_MATRIX,
+        2 => NEGATIVE_I_MATRIX,
+        3 => NEGATIVE_S_MATRIX,
+        0 => I_MATRIX
+      }
+      matrix_s_power_map[n_power % 4]
+    end
   end
 end
