@@ -80,4 +80,8 @@ module ModularForms
   def st_gen_matrix(n_power)
     SL2Zgroups.st_matrix(n_power)
   end
+
+  def product_gen_mats(gen_mat_a, gen_mat_b)
+    SL2Zgroups.product_gen_matrices(gen_mat_a, gen_mat_b)
+  end
 end
