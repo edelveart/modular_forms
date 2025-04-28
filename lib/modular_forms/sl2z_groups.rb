@@ -14,5 +14,9 @@ module ModularForms
     NEGATIVE_I_MATRIX = [[-1, 0], [0, -1]].freeze
     ST_MATRIX = [[0, -1], [1, 1]].freeze
     U_MATRIX = [[1, 0], [1, 1]].freeze
+
+    def self.t_matrix(n_power)
+      [[1, n_power], [0, 1]]
+    end
   end
 end
