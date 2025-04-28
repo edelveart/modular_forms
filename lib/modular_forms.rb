@@ -65,19 +65,19 @@ module ModularForms
     SL2Zgroups.index_gamma0(n)
   end
 
-  def t_matrix_power(n)
-    SL2Zgroups.t_matrix(n)
+  def t_gen_matrix(n_power)
+    SL2Zgroups.t_matrix(n_power)
   end
 
-  def s_matrix_power(n)
-    SL2Zgroups.s_matrix(n)
+  def s_gen_matrix(n_power)
+    SL2Zgroups.s_matrix(n_power)
   end
 
-  def u_matrix_power(mod_n)
+  def u_gen_matrix(mod_n)
     SL2Zgroups.u_matrix(mod_n)
   end
 
-  def st_matrix_power(n)
-    SL2Zgroups.st_matrix(n)
+  def st_gen_matrix(n_power)
+    SL2Zgroups.st_matrix(n_power)
   end
 end
