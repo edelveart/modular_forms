@@ -73,7 +73,11 @@ module ModularForms
     SL2Zgroups.s_matrix(n)
   end
 
-  def u_matrix_power(n_mod)
-    SL2Zgroups.u_matrix(n_mod)
+  def u_matrix_power(mod_n)
+    SL2Zgroups.u_matrix(mod_n)
+  end
+
+  def st_matrix_power(n)
+    SL2Zgroups.st_matrix(n)
   end
 end
