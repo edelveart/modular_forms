@@ -44,5 +44,14 @@ module ModularForms
     def self.u_matrix(n_power_mod)
       [[1, 0], [n_power_mod, 1]]
     end
+
+    def self.product_gen_matrices(gen_mat_a, gen_mat_b) # rubocop:disable Metrics/AbcSize
+      [
+        [gen_mat_a[0][0] * gen_mat_b[0][0] + gen_mat_a[0][1] * gen_mat_b[1][0],
+         gen_mat_a[0][0] * gen_mat_b[0][1] + gen_mat_a[0][1] * gen_mat_b[1][1]],
+        [gen_mat_a[1][0] * gen_mat_b[0][0] + gen_mat_a[1][1] * gen_mat_b[1][0],
+         gen_mat_a[1][0] * gen_mat_b[0][1] + gen_mat_a[1][1] * gen_mat_b[1][1]]
+      ]
+    end
   end
 end
