@@ -11,5 +11,9 @@ module ModularForms
       x, y = point
       y**2 == x**3 + x * a + b
     end
+
+    def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
+      -16 * (4 * a**3 + 27 * b**2)
+    end
   end
 end
