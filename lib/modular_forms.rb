@@ -29,12 +29,12 @@ module ModularForms
     EisensteinSeries.eisenstein_serie_power(weight_k, power, precision)
   end
 
-  def dedekind_eta_function(pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
-    DedekindEtaFunctions.eta_function(pentagonal_coefs)
+  def dedekind_eta_function(m_scale = 1, pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
+    DedekindEtaFunctions.eta_function(m_scale, pentagonal_coefs)
   end
 
-  def dedekind_eta_power(power, precision)
-    DedekindEtaFunctions.eta_function_power(power, precision)
+  def dedekind_eta_pow(power, precision, m_scale = 1)
+    DedekindEtaFunctions.eta_function_pow(power, precision, m_scale)
   end
 
   def ramanujan_tau_function
