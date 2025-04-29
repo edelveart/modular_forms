@@ -15,5 +15,9 @@ module ModularForms
     def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
       -16 * (4 * a**3 + 27 * b**2)
     end
+
+    def self.j_invariant(a, b) # rubocop:disable Naming/MethodParameterName
+      1728 * Rational(* 4 * a**3, 4 * a**3 + 27 * b**2)
+    end
   end
 end
