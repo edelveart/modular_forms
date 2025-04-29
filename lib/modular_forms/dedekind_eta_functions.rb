@@ -30,8 +30,8 @@ module ModularForms
       end
     end
 
-    def self.eta_function_power(power, precision)
-      vec = eta_function.take(precision)
+    def self.eta_function_pow(power, precision, m_scale = 1)
+      vec = eta_function(m_scale).take(precision)
       eta_q_coefs = [1]
       power.times do
         eta_q_coefs = NumericHelpers.linear_convolve(eta_q_coefs, vec, precision)
