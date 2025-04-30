@@ -45,5 +45,9 @@ module ModularForms
       a, b, p = curve.values_at(:a, :b, :p)
       reduction_modp(-16 * (4 * a**3 + 27 * b**2), p)
     end
+
+    def self.fermat_inverse_modp(a, p) # rubocop:disable Naming/MethodParameterName
+      a.pow(p - 2, p)
+    end
   end
 end
