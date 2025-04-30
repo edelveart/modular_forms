@@ -28,5 +28,17 @@ module ModularForms
       puts "y^2 = x^3 #{a_modp}x #{b_modp} over Finite Field #{p}"
       { a: a, b: b, p: p }
     end
+
+    def self.point_on_curve_modp?(curve, point)
+      return true if point == nil # rubocop:disable Style/NilComparison
+
+      a, b, p = curve.values_at(:a, :b, :p)
+      x, y = point
+      x_modp = reduction_modp(x, p)
+      y_modp = reduction_modp(y, p)
+      coordinates = reduction_modp(y**2, p) == reduction_modp(x**3 + x * a + b, p)
+
+      raise "Coordinates [#{x_modp},#{y_modp}] do not define a point on curve" unless coordinates
+    end
   end
 end
