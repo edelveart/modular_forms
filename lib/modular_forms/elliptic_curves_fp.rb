@@ -54,5 +54,29 @@ module ModularForms
       a, b, p = curve.values_at(:a, :b, :p)
       reduction_modp(1728 * (4 * a**3) * fermat_inverse_modp(4 * a**3 + 27 * b**2, p), p)
     end
+
+    def self.point_addition_modp(curve, p_point, q_point) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
+      a, _, p = curve.values_at(:a, _, :p)
+      return p_point if q_point == nil # rubocop:disable Style/NilComparison
+      return q_point if p_point == nil # rubocop:disable Style/NilComparison
+
+      x1, y1 = p_point
+      x2, y2 = q_point
+      return nil if x1 == x2 && reduction_modp(y1 + y2, p) == 0 # rubocop:disable Style/NumericPredicate
+
+      if p_point != q_point
+        num1 = y2 - y1
+        den1 = x2 - x1
+        lambda_m = num1 * fermat_inverse_modp(den1, p)
+      else
+        num2 = 3 * x1**2 + a
+        den2 = 2 * y1
+        lambda_m = num2 * fermat_inverse_modp(den2, p)
+      end
+
+      x3 = lambda_m**2 - x1 - x2
+      y3 = lambda_m * (x1 - x3) - y1
+      [reduction_modp(x3, p), reduction_modp(y3, p)]
+    end
   end
 end
