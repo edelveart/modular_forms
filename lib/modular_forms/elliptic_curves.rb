@@ -7,7 +7,17 @@ module ModularForms
   #
   # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over char(k) !={2, 3}
   module EllipticCurves
-    def self.point_on_curve?(point, a, b) # rubocop:disable Naming/MethodParameterName
+    def self.elliptic_curve(a, b) # rubocop:disable Naming/MethodParameterName
+      raise "y^2=x^3 #{a}x #{b} defines a singular curve" if discriminant(a, b) == 0 # rubocop:disable Style/NumericPredicate
+
+      puts "y^2 = x^3 #{a}x #{b}"
+      { a: a, b: b }
+    end
+
+    def self.point_on_curve?(curve, point)
+      return true if point == nil # rubocop:disable Style/NilComparison
+
+      a, b = curve.values_at(:a, :b)
       x, y = point
       y**2 == x**3 + x * a + b
     end
@@ -20,11 +30,18 @@ module ModularForms
       1728 * Rational(4 * a**3, 4 * a**3 + 27 * b**2)
     end
 
-    def self.point_addition(p, q, a) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Naming/MethodParameterName
+    def self.point_addition(curve, p, q) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Naming/MethodParameterName,Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
+      raise 'P=[x,y] is not on the curve' unless point_on_curve?(curve, p)
+      raise 'Q=[x,y] is not on the curve' unless point_on_curve?(curve, q)
+
+      return p if q == nil # rubocop:disable Style/NilComparison
+      return q if p == nil # rubocop:disable Style/NilComparison
+
       x1, y1 = p
       x2, y2 = q
-      return :infinity if x1 == x2 && y1 + y2 == 0 # rubocop:disable Style/NumericPredicate
+      return nil if x1 == x2 && y1 + y2 == 0 # rubocop:disable Style/NumericPredicate
 
+      a, = curve.values_at(:a)
       if p != q # rubocop:disable Style/ConditionalAssignment
         lambda_m = Rational(y2 - y1, x2 - x1)
       else
