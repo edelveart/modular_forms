@@ -51,5 +51,18 @@ module ModularForms
       y3 = lambda_m * (x1 - x3) - y1
       [x3, y3]
     end
+
+    def self.scalar_mul_point(curve, n, point)
+      n_times_point = nil
+      addend = point
+
+      while n > 0 # rubocop:disable Style/NumericPredicate
+        n_times_point = point_addition(curve, n_times_point, addend) if n.odd?
+        addend = point_addition(curve, addend, addend)
+        n >>= 1
+      end
+
+      n_times_point
+    end
   end
 end
