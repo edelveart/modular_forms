@@ -3,9 +3,9 @@
 require_relative '../numeric_helpers/numeric_helpers'
 
 module ModularForms
-  # ModularForms::EllipticCurvesFP
+  # ModularForms::EllipticCurvesFp
   #
-  # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over char(k) !={2, 3}
+  # This module provides methods for generating points on Elliptic Curves over Finite Fields (short Weierstrass form)
   module EllipticCurvesFp
     def self.reduction_modp(n, modp)
       ((n % modp) + modp) % modp
@@ -39,6 +39,11 @@ module ModularForms
       coordinates = reduction_modp(y**2, p) == reduction_modp(x**3 + x * a + b, p)
 
       raise "Coordinates [#{x_modp},#{y_modp}] do not define a point on curve" unless coordinates
+    end
+
+    def self.discriminant_modp(curve)
+      a, b, p = curve.values_at(:a, :b, :p)
+      reduction_modp(-16 * (4 * a**3 + 27 * b**2), p)
     end
   end
 end
