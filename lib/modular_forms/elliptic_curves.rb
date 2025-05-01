@@ -26,11 +26,13 @@ module ModularForms
       true
     end
 
-    def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
+    def self.discriminant(curve)
+      a, b = curve
       -16 * (4 * a**3 + 27 * b**2)
     end
 
-    def self.j_invariant(a, b) # rubocop:disable Naming/MethodParameterName
+    def self.j_invariant(curve)
+      a, b = curve
       1728 * Rational(4 * a**3, 4 * a**3 + 27 * b**2)
     end
 
