@@ -92,26 +92,26 @@ module ModularForms
       n_times_point
     end
 
-    def self.points(curve) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
+    def self.points(curve, point_at_infinity = false) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Style/OptionalBooleanParameter
       a, b, p = curve.values_at(:a, :b, :p)
 
-      points_with_o = []
+      list_of_points = point_at_infinity ? [nil] : []
       (0..p - 1).each do |x|
         eq_rh = (x**3 + a * x + b) % p
 
         (0..(p / 2)).each do |y|
           if (y**2) % p == eq_rh
-            points_with_o << [x, y]
-            points_with_o << [x, p - y]
+            list_of_points << [x, y]
+            list_of_points << [x, p - y]
           end
         end
       end
 
-      points_with_o
+      list_of_points
     end
 
     def self.cardinality(curve)
-      points(curve).length + 1
+      points(curve, true).length
     end
   end
 end
