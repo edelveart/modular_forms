@@ -7,7 +7,8 @@ module ModularForms
   #
   # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over char(k) !={2, 3}
   module EllipticCurves
-    def self.elliptic_curve(a, b) # rubocop:disable Naming/MethodParameterName
+    def self.elliptic_curve(coefs)
+      a, b = coefs
       raise "y^2=x^3 #{a}x #{b} defines a singular curve" if discriminant(a, b) == 0 # rubocop:disable Style/NumericPredicate
 
       puts "y^2 = x^3 #{a}x #{b}"
@@ -21,6 +22,8 @@ module ModularForms
       x, y = point
       coordinates = y**2 == x**3 + x * a + b
       raise "Coordinates [#{x},#{y}] do not define a point on curve" unless coordinates
+
+      true
     end
 
     def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
