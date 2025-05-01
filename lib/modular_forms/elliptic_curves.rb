@@ -19,7 +19,8 @@ module ModularForms
 
       a, b = curve.values_at(:a, :b)
       x, y = point
-      y**2 == x**3 + x * a + b
+      coordinates = y**2 == x**3 + x * a + b
+      raise "Coordinates [#{x},#{y}] do not define a point on curve" unless coordinates
     end
 
     def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
@@ -30,10 +31,7 @@ module ModularForms
       1728 * Rational(4 * a**3, 4 * a**3 + 27 * b**2)
     end
 
-    def self.point_addition(curve, p, q) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Naming/MethodParameterName,Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
-      raise 'P=[x,y] is not on the curve' unless point_on_curve?(curve, p)
-      raise 'Q=[x,y] is not on the curve' unless point_on_curve?(curve, q)
-
+    def self.point_addition(curve, p, q) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Naming/MethodParameterName
       return p if q == nil # rubocop:disable Style/NilComparison
       return q if p == nil # rubocop:disable Style/NilComparison
 
