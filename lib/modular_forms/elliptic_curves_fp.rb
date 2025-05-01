@@ -92,17 +92,16 @@ module ModularForms
       n_times_point
     end
 
-    def self.points(curve, point_at_infinity = false) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Style/OptionalBooleanParameter
+    def self.points(curve, point_at_infinity = false) # rubocop:disable Metrics/MethodLength,Style/OptionalBooleanParameter,Metrics/AbcSize
       a, b, p = curve.values_at(:a, :b, :p)
 
       list_of_points = point_at_infinity ? [nil] : []
-      (0..p - 1).each do |x|
+      (0..(p - 1)).each do |x|
         eq_rh = (x**3 + a * x + b) % p
-
-        (0..(p / 2)).each do |y|
-          if (y**2) % p == eq_rh
+        (0..((p - 1) / 2)).each do |y|
+          if ((y**2) % p) == eq_rh
             list_of_points << [x, y]
-            list_of_points << [x, p - y]
+            list_of_points << [x, p - y] if p - y < p
           end
         end
       end
