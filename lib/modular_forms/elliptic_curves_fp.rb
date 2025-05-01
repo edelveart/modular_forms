@@ -16,7 +16,8 @@ module ModularForms
     end
 
     ## podría emular como en SAGE para que sea divertido
-    def self.elliptic_curve_fp(p, a, b) # rubocop:disable Naming/MethodParameterName
+    def self.elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
+      a, b = coefs
       raise "#{p} is not a prime number" if NumericHelpers.prime_number?(p) == false
 
       d = reduction_modp(discriminant(a, b), p)
@@ -39,6 +40,8 @@ module ModularForms
       coordinates = reduction_modp(y**2, p) == reduction_modp(x**3 + x * a + b, p)
 
       raise "Coordinates [#{x_modp},#{y_modp}] do not define a point on curve" unless coordinates
+
+      true
     end
 
     def self.discriminant_modp(curve)
