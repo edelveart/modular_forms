@@ -4,7 +4,7 @@ require_relative '../numeric_helpers/numeric_helpers'
 
 module ModularForms
   # ModularForms::ThetaFunctions
-  # This module provides a generator for Thetha functions.
+  # This module provides a generator for Theta functions.
   module ThetaFunctions
     def self.jacobi_theta_function(jacobi_index = 3, square_coefs = false) # rubocop:disable Style/OptionalBooleanParameter,Metrics/MethodLength,Metrics/AbcSize
       Enumerator.new do |q|
