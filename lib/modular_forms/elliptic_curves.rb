@@ -5,6 +5,10 @@ module ModularForms
   #
   # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over char(k) !={2, 3}
   module EllipticCurves
+    def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
+      -16 * (4 * a**3 + 27 * b**2)
+    end
+
     def self.elliptic_curve(coefs)
       a, b = coefs
       raise "y^2=x^3 #{a}x #{b} defines a singular curve" if discriminant(a, b) == 0 # rubocop:disable Style/NumericPredicate
@@ -24,13 +28,23 @@ module ModularForms
       true
     end
 
-    def self.discriminant(curve)
-      a, b = curve
+    def self.negate_p(point)
+      raise ArgumentError, 'Expected a point with two coordinates [x, y]' unless point.length == 2
+
+      x, y = point
+      [x, -y]
+    end
+
+    def self.discriminant_qq(curve)
+      a, b = curve.values_at(:a, :b)
       -16 * (4 * a**3 + 27 * b**2)
     end
 
     def self.j_invariant(curve)
-      a, b = curve
+      a, b = curve.values_at(:a, :b)
+      return 0 if a == 0 # rubocop:disable Style/NumericPredicate
+      return 1728 if b == 0 # rubocop:disable Style/NumericPredicate
+
       1728 * Rational(4 * a**3, 4 * a**3 + 27 * b**2)
     end
 
