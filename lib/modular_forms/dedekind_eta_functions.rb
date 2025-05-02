@@ -44,5 +44,15 @@ module ModularForms
 
       Rational(num, den) - (num / den).floor - Rational(1, 2)
     end
+
+    def self.dedekind_sum(h, k) # rubocop:disable Naming/MethodParameterName
+      raise "#{k} parameter must be greater than 0" if k < 1
+
+      s = 0
+      (1..k - 1).each do |n|
+        s += centered_fractional_part(n, k) * centered_fractional_part(h * n, k)
+      end
+      s
+    end
   end
 end
