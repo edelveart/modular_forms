@@ -87,5 +87,24 @@ module ModularForms
       end
       arr_coefs
     end
+
+    def self.euler_criterion(x, pmod)
+      (x**((pmod - 1) / 2)) % pmod == 1
+    end
+
+    def self.square_modp_list(pmod, init = 1)
+      squares_fp = []
+      non_squares_fp = []
+
+      (init..pmod - 1).each do |x|
+        if euler_criterion(x, pmod)
+          squares_fp << x
+        else
+          non_squares_fp << x
+        end
+      end
+
+      [squares_fp, non_squares_fp]
+    end
   end
 end
