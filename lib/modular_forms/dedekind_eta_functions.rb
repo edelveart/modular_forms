@@ -38,5 +38,11 @@ module ModularForms
       end
       eta_q_coefs
     end
+
+    def self.centered_fractional_part(num, den)
+      return 0 if num % den == 0 # rubocop:disable Style/NumericPredicate
+
+      Rational(num, den) - (num / den).floor - Rational(1, 2)
+    end
   end
 end
