@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../numeric_helpers/numeric_helpers'
+require_relative './elliptic_curves'
 
 module ModularForms
   # ModularForms::EllipticCurvesFp
@@ -11,16 +12,11 @@ module ModularForms
       ((n % modp) + modp) % modp
     end
 
-    def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
-      -16 * (4 * a**3 + 27 * b**2)
-    end
-
-    ## podría emular como en SAGE para que sea divertido
     def self.elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
       a, b = coefs
       raise "#{p} is not a prime number" if NumericHelpers.prime_number?(p) == false
 
-      d = reduction_modp(discriminant(a, b), p)
+      d = reduction_modp(EllipticCurves.discriminant(a, b), p)
 
       a_modp = reduction_modp(a, p)
       b_modp = reduction_modp(b, p)
