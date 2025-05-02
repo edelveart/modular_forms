@@ -115,5 +115,15 @@ module ModularForms
     def self.cardinality(curve)
       points(curve, true).length
     end
+
+    def self.quadratic_twist(curve)
+      a, b, p = curve.values_at(:a, :b, :p)
+
+      d_non_square = NumericHelpers.square_modp_list(p, 2)[1]
+      index = rand(d_non_square.length)
+      d = d_non_square[index]
+
+      elliptic_curve_fp(p, [(a * d**2) % p, (b * d**3) % p])
+    end
   end
 end
