@@ -106,5 +106,10 @@ module ModularForms
 
       [squares_fp, non_squares_fp]
     end
+
+    def self.gcd(a, m) # rubocop:disable Naming/MethodParameterName
+      a, m = m, a % m while m != 0
+      a.abs
+    end
   end
 end
