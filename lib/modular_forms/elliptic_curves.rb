@@ -79,5 +79,15 @@ module ModularForms
 
       n_times_point
     end
+
+    def self.isogeny_2deg(curve, point_2tor)
+      a, b = curve.values_at(:a, :b)
+      x0 = point_2tor[0]
+      t = 3 * x0**2 + a
+      w = x0 * t
+      a_isog = a - 5 * t
+      b_isog = b - 7 * w
+      elliptic_curve([a_isog, b_isog])
+    end
   end
 end
