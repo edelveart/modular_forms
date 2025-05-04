@@ -134,4 +134,8 @@ module ModularForms
   def point_addition_modp(curve, p_point, q_point)
     EllipticCurvesFp.point_addition_modp(curve, p_point, q_point)
   end
+
+  def scalar_mul_point_mopd(curve, n, point)
+    EllipticCurvesFp.scalar_mul_point_mopd(curve, n, point)
+  end
 end
