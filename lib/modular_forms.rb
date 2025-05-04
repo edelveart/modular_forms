@@ -122,4 +122,8 @@ module ModularForms
   def point_on_curve_modp?(curve, point)
     EllipticCurvesFp.point_on_curve_modp?(curve, point)
   end
+
+  def discriminant_modp(curve)
+    EllipticCurvesFp.discriminant_modp(curve)
+  end
 end
