@@ -96,4 +96,8 @@ module ModularForms
   def discriminant_qq(curve)
     EllipticCurvesQ.discriminant_qq(curve)
   end
+
+  def j_invariant_qq(curve)
+    EllipticCurvesQ.j_invariant(curve)
+  end
 end
