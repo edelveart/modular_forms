@@ -138,4 +138,8 @@ module ModularForms
   def scalar_mul_point_mopd(curve, n, point)
     EllipticCurvesFp.scalar_mul_point_mopd(curve, n, point)
   end
+
+  def points_fp(curve, point_at_infinity = false) # rubocop:disable Style/OptionalBooleanParameter
+    EllipticCurvesFp.points(curve, point_at_infinity)
+  end
 end
