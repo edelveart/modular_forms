@@ -17,7 +17,7 @@ require_relative './modular_forms/dirichlet_characters'
 # under the action of a modular group, with deep connections to number theory.
 # It enables the calculation of coefficients and is well-suited for applications in Sonic Pi,
 # particularly for algorithmic music composition and live coding.
-module ModularForms
+module ModularForms # rubocop:disable Metrics/ModuleLength
   module_function
 
   def eisenstein_serie(weight_k, gal_f = nil)
@@ -146,6 +146,10 @@ module ModularForms
 
   def cardinality_fp(curve)
     EllipticCurvesFp.cardinality(curve)
+  end
+
+  def quadratic_twist_fp(curve)
+    EllipticCurvesFp.quadratic_twist(curve)
   end
 
   def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
