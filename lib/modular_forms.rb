@@ -8,6 +8,8 @@ require_relative './modular_forms/klein_j_invariant'
 require_relative './modular_forms/hecke_operators'
 require_relative './modular_forms/sl2z_groups'
 require_relative './modular_forms/elliptic_curves_q'
+require_relative './modular_forms/elliptic_curves_fp'
+
 # ModularForms
 #
 # This module provides tools for working with modular forms, complex, analytic functions invariant
@@ -111,5 +113,9 @@ module ModularForms
 
   def scalar_mul_point_q(curve, n, point)
     EllipticCurvesQ.scalar_mul_point(curve, n, point)
+  end
+
+  def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
+    EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
 end
