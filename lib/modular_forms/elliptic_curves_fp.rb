@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../numeric_helpers/numeric_helpers'
-require_relative './elliptic_curves'
+require_relative './elliptic_curves_q'
 
 module ModularForms
   # ModularForms::EllipticCurvesFp
@@ -16,7 +16,7 @@ module ModularForms
       a, b = coefs
       raise "#{p} is not a prime number" if NumericHelpers.prime_number?(p) == false
 
-      d = reduction_modp(EllipticCurves.discriminant(a, b), p)
+      d = reduction_modp(EllipticCurvesQ.discriminant(a, b), p)
 
       a_modp = reduction_modp(a, p)
       b_modp = reduction_modp(b, p)
