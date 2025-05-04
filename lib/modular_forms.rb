@@ -37,6 +37,10 @@ module ModularForms
     DedekindEtaFunctions.eta_function_pow(power, precision, m_scale)
   end
 
+  def dedekind_sum(h, k) # rubocop:disable Naming/MethodParameterName
+    DedekindEtaFunctions.dedekind_sum(h, k)
+  end
+
   def ramanujan_tau_function
     RamanujanTauFunction.niebur_sigma_formula
   end
