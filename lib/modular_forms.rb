@@ -120,6 +120,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     EllipticCurvesQ.isogeny_2deg(curve, point_2tor)
   end
 
+  def isogeny_ndeg_q(curve, point_ntor, order)
+    EllipticCurvesQ.isogeny_ndeg(curve, point_ntor, order)
+  end
+
   def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
     EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
