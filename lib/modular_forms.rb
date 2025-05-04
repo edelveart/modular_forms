@@ -7,7 +7,7 @@ require_relative './modular_forms/theta_functions'
 require_relative './modular_forms/klein_j_invariant'
 require_relative './modular_forms/hecke_operators'
 require_relative './modular_forms/sl2z_groups'
-
+require_relative './modular_forms/elliptic_curves_q'
 # ModularForms
 #
 # This module provides tools for working with modular forms, complex, analytic functions invariant
@@ -87,5 +87,9 @@ module ModularForms
 
   def product_gen_mats(gen_mat_a, gen_mat_b)
     SL2Zgroups.product_gen_matrices(gen_mat_a, gen_mat_b)
+  end
+
+  def elliptic_curve_q(coefs)
+    EllipticCurvesQ.elliptic_curve_q(coefs)
   end
 end
