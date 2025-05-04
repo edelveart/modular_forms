@@ -118,4 +118,8 @@ module ModularForms
   def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
     EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
+
+  def point_on_curve_modp?(curve, point)
+    EllipticCurvesFp.point_on_curve_modp?(curve, point)
+  end
 end
