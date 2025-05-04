@@ -92,4 +92,8 @@ module ModularForms
   def elliptic_curve_q(coefs)
     EllipticCurvesQ.elliptic_curve_q(coefs)
   end
+
+  def discriminant_qq(curve)
+    EllipticCurvesQ.discriminant_qq(curve)
+  end
 end
