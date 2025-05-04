@@ -100,4 +100,8 @@ module ModularForms
   def j_invariant_qq(curve)
     EllipticCurvesQ.j_invariant(curve)
   end
+
+  def point_on_curve_q?(curve, point)
+    EllipticCurvesQ.point_on_curve?(curve, point)
+  end
 end
