@@ -4,12 +4,12 @@ module ModularForms
   # ModularForms::EllipticCurves
   #
   # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over Q
-  module EllipticCurves
+  module EllipticCurvesQ
     def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
       -16 * (4 * a**3 + 27 * b**2)
     end
 
-    def self.elliptic_curve(coefs)
+    def self.elliptic_curve_q(coefs)
       a, b = coefs
       raise "y^2=x^3 #{a}x #{b} defines a singular curve" if discriminant(a, b) == 0 # rubocop:disable Style/NumericPredicate
 
@@ -87,7 +87,7 @@ module ModularForms
       w = x0 * t
       a_isog = a - 5 * t
       b_isog = b - 7 * w
-      elliptic_curve([a_isog, b_isog])
+      elliptic_curve_q([a_isog, b_isog])
     end
 
     def self.isogeny_ndeg(curve, point_ntor, order) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
@@ -104,7 +104,7 @@ module ModularForms
       end
       a_isog = a - 5 * t
       b_isog = b - 7 * w
-      elliptic_curve([a_isog, b_isog])
+      elliptic_curve_q([a_isog, b_isog])
     end
   end
 end
