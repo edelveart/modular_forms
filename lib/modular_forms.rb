@@ -126,4 +126,8 @@ module ModularForms
   def discriminant_modp(curve)
     EllipticCurvesFp.discriminant_modp(curve)
   end
+
+  def j_invariant_modp(curve)
+    EllipticCurvesFp.j_invariant_modp(curve)
+  end
 end
