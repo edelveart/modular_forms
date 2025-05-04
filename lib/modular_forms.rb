@@ -142,4 +142,8 @@ module ModularForms
   def points_fp(curve, point_at_infinity = false) # rubocop:disable Style/OptionalBooleanParameter
     EllipticCurvesFp.points(curve, point_at_infinity)
   end
+
+  def cardinality_fp(curve)
+    EllipticCurvesFp.cardinality(curve)
+  end
 end
