@@ -130,4 +130,8 @@ module ModularForms
   def j_invariant_modp(curve)
     EllipticCurvesFp.j_invariant_modp(curve)
   end
+
+  def point_addition_modp(curve, p_point, q_point)
+    EllipticCurvesFp.point_addition_modp(curve, p_point, q_point)
+  end
 end
