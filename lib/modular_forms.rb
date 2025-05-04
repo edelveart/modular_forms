@@ -116,6 +116,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     EllipticCurvesQ.scalar_mul_point(curve, n, point)
   end
 
+  def isogeny_2deg_q(curve, point_2tor)
+    EllipticCurvesQ.isogeny_2deg(curve, point_2tor)
+  end
+
   def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
     EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
