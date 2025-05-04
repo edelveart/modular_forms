@@ -9,6 +9,7 @@ require_relative './modular_forms/hecke_operators'
 require_relative './modular_forms/sl2z_groups'
 require_relative './modular_forms/elliptic_curves_q'
 require_relative './modular_forms/elliptic_curves_fp'
+require_relative './modular_forms/dirichlet_characters'
 
 # ModularForms
 #
@@ -145,5 +146,9 @@ module ModularForms
 
   def cardinality_fp(curve)
     EllipticCurvesFp.cardinality(curve)
+  end
+
+  def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
+    DirichletCharacters.dirichlet_trivchar(modq, a)
   end
 end
