@@ -108,4 +108,8 @@ module ModularForms
   def point_addition_q(curve, p, q) # rubocop:disable Naming/MethodParameterName
     EllipticCurvesQ.point_addition(curve, p, q)
   end
+
+  def scalar_mul_point_q(curve, n, point)
+    EllipticCurvesQ.scalar_mul_point(curve, n, point)
+  end
 end
