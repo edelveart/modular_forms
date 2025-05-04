@@ -151,4 +151,8 @@ module ModularForms
   def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
     DirichletCharacters.dirichlet_trivchar(modq, a)
   end
+
+  def conrey_p_pminus1(modp, a) # rubocop:disable Naming/MethodParameterName
+    DirichletCharacters.conrey_p_pminus1(modp, a)
+  end
 end
