@@ -92,6 +92,14 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     SL2Zgroups.product_gen_matrices(gen_mat_a, gen_mat_b)
   end
 
+  def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
+    DirichletCharacters.dirichlet_trivchar(modq, a)
+  end
+
+  def conrey_p_pminus1(modp, a) # rubocop:disable Naming/MethodParameterName
+    DirichletCharacters.conrey_p_pminus1(modp, a)
+  end
+
   def elliptic_curve_q(coefs)
     EllipticCurvesQ.elliptic_curve_q(coefs)
   end
@@ -158,13 +166,5 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
 
   def quadratic_twist_fp(curve)
     EllipticCurvesFp.quadratic_twist(curve)
-  end
-
-  def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
-    DirichletCharacters.dirichlet_trivchar(modq, a)
-  end
-
-  def conrey_p_pminus1(modp, a) # rubocop:disable Naming/MethodParameterName
-    DirichletCharacters.conrey_p_pminus1(modp, a)
   end
 end
