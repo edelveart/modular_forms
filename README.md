@@ -52,15 +52,16 @@ end
 3. `ModularForms.eisenstein_serie_power(weight_k, power, precision)`
 4. `ModularForms.dedekind_eta_function(m_scale = 1, pentagonal_coefs = false)`
 5. `ModularForms.dedekind_eta_pow(power, precision, m_scale = 1)`
-6. `ModularForms.ramanujan_tau_function`
-7. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
-8. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
-9. `ModularForms.j_invariant(precision)`
-10. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)`
-11. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)`
-12. `ModularForms.gamma0_index(n)`
-13. `ModularForms.t_gen_matrix(n_power)`
-14. `ModularForms.s_gen_matrix(n_power)`
-15. `ModularForms.u_gen_matrix(mod_n)`
-16. `ModularForms.st_gen_matrix(n_power)`
-17. `ModularForms.product_gen_mats(gen_mat_a, gen_mat_b)`
+6. `ModularForms.dedekind_sum(h, k)`
+7. `ModularForms.ramanujan_tau_function`
+8. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
+9. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
+10. `ModularForms.j_invariant(precision)`
+11. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)`
+12. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)`
+13. `ModularForms.gamma0_index(n)`
+14. `ModularForms.t_gen_matrix(n_power)`
+15. `ModularForms.s_gen_matrix(n_power)`
+16. `ModularForms.u_gen_matrix(mod_n)`
+17. `ModularForms.st_gen_matrix(n_power)`
+18. `ModularForms.product_gen_mats(gen_mat_a, gen_mat_b)`

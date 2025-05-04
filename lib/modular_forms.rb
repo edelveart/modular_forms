@@ -96,11 +96,11 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     EllipticCurvesQ.elliptic_curve_q(coefs)
   end
 
-  def discriminant_qq(curve)
+  def discriminant_q(curve)
     EllipticCurvesQ.discriminant_qq(curve)
   end
 
-  def j_invariant_qq(curve)
+  def j_invariant_q(curve)
     EllipticCurvesQ.j_invariant(curve)
   end
 
