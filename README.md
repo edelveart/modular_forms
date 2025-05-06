@@ -11,7 +11,7 @@ A primer on Modular Forms and their mathematical symmetries, made into music thr
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series, Hecke operators or SL_2(Z) matrices, which are often introduced in early number theory courses.
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series, Hecke operators, Dedekind eta functions, Elliptic Curves over Q and F_p, Isogenies or SL_2(Z) matrices, which are often introduced in early number theory courses.
 [See the full list of implemented generators, matrices, and operations below](#implemented-modular-forms-generators-sl2z-matrices-and-associated-operations)
 
 - **Not optimized for high performance**: This library is designed for creative exploration rather than maximum computational efficiency. It is not a replacement for advanced mathematical software.
