@@ -1,59 +1,48 @@
 # frozen_string_literal: true
 
-require_relative './modular_forms/eisenstein_series'
-require_relative './modular_forms/dedekind_eta_functions'
-require_relative './modular_forms/ramanujan_tau_function'
-require_relative './modular_forms/theta_functions'
-require_relative './modular_forms/klein_j_invariant'
-require_relative './modular_forms/hecke_operators'
-require_relative './modular_forms/sl2z_groups'
-require_relative './modular_forms/elliptic_curves_q'
-require_relative './modular_forms/elliptic_curves_fp'
-require_relative './modular_forms/dirichlet_characters'
+require_relative './modular_forms/core'
 
 # ModularForms
 #
-# This module provides tools for working with modular forms, complex, analytic functions invariant
-# under the action of a modular group, with deep connections to number theory.
-# It enables the calculation of coefficients and is well-suited for applications in Sonic Pi,
-# particularly for algorithmic music composition and live coding.
+# This module provides tools for modular forms, elliptic curves, SL_2(Z) matrices, and Dirichlet characters.
+# It is well-suited for applications in Sonic Pi, particularly for algorithmic music composition and live coding.
 module ModularForms # rubocop:disable Metrics/ModuleLength
   module_function
 
   def eisenstein_serie(weight_k, gal_f = nil)
-    EisensteinSeries.eisenstein_series(weight_k, gal_f)
+    Core::EisensteinSeries.eisenstein_series(weight_k, gal_f)
   end
 
   def eisenstein_series_product(weight_k1, weight_k2, precision)
-    EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, precision)
+    Core::EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, precision)
   end
 
   def eisenstein_serie_power(weight_k, power, precision)
-    EisensteinSeries.eisenstein_serie_power(weight_k, power, precision)
+    Core::EisensteinSeries.eisenstein_serie_power(weight_k, power, precision)
   end
 
   def dedekind_eta_function(m_scale = 1, pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
-    DedekindEtaFunctions.eta_function(m_scale, pentagonal_coefs)
+    Core::DedekindEtaFunctions.eta_function(m_scale, pentagonal_coefs)
   end
 
   def dedekind_eta_pow(power, precision, m_scale = 1)
-    DedekindEtaFunctions.eta_function_pow(power, precision, m_scale)
+    Core::DedekindEtaFunctions.eta_function_pow(power, precision, m_scale)
   end
 
   def dedekind_sum(h, k) # rubocop:disable Naming/MethodParameterName
-    DedekindEtaFunctions.dedekind_sum(h, k)
+    Core::DedekindEtaFunctions.dedekind_sum(h, k)
   end
 
   def ramanujan_tau_function
-    RamanujanTauFunction.niebur_sigma_formula
+    Core::RamanujanTauFunction.niebur_sigma_formula
   end
 
   def jacobi_theta_function(jacobi_index = 3, square_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
-    ThetaFunctions.jacobi_theta_function(jacobi_index, square_coefs)
+    Core::ThetaFunctions.jacobi_theta_function(jacobi_index, square_coefs)
   end
 
   def jacobi_theta_power(jacobi_index, power, precision)
-    ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, precision)
+    Core::ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, precision)
   end
 
   def j_invariant(precision)
@@ -61,110 +50,110 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   end
 
   def hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
-    HeckeOperators.hecke_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
+    Core::HeckeOperators.hecke_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
   end
 
   def hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)
-    HeckeOperators.hecke_prime_cusp(cusp_form_arr, prime, weight_k, precision)
+    Core::HeckeOperators.hecke_prime_cusp(cusp_form_arr, prime, weight_k, precision)
   end
 
   def gamma0_index(n)
-    SL2Zgroups.index_gamma0(n)
+    Core::SL2Zgroups.index_gamma0(n)
   end
 
   def t_gen_matrix(n_power)
-    SL2Zgroups.t_matrix(n_power)
+    Core::Core::SL2Zgroups.t_matrix(n_power)
   end
 
   def s_gen_matrix(n_power)
-    SL2Zgroups.s_matrix(n_power)
+    Core::SL2Zgroups.s_matrix(n_power)
   end
 
   def u_gen_matrix(mod_n)
-    SL2Zgroups.u_matrix(mod_n)
+    Core::SL2Zgroups.u_matrix(mod_n)
   end
 
   def st_gen_matrix(n_power)
-    SL2Zgroups.st_matrix(n_power)
+    Core::SL2Zgroups.st_matrix(n_power)
   end
 
   def product_gen_mats(gen_mat_a, gen_mat_b)
-    SL2Zgroups.product_gen_matrices(gen_mat_a, gen_mat_b)
+    Core::SL2Zgroups.product_gen_matrices(gen_mat_a, gen_mat_b)
   end
 
   def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
-    DirichletCharacters.dirichlet_trivchar(modq, a)
+    Core::DirichletCharacters.dirichlet_trivchar(modq, a)
   end
 
   def conrey_p_pminus1(modp, a) # rubocop:disable Naming/MethodParameterName
-    DirichletCharacters.conrey_p_pminus1(modp, a)
+    Core::DirichletCharacters.conrey_p_pminus1(modp, a)
   end
 
   def elliptic_curve_q(coefs)
-    EllipticCurvesQ.elliptic_curve_q(coefs)
+    Core::EllipticCurvesQ.elliptic_curve_q(coefs)
   end
 
   def discriminant_q(curve)
-    EllipticCurvesQ.discriminant_qq(curve)
+    Core::EllipticCurvesQ.discriminant_qq(curve)
   end
 
   def j_invariant_q(curve)
-    EllipticCurvesQ.j_invariant(curve)
+    Core::EllipticCurvesQ.j_invariant(curve)
   end
 
   def point_on_curve_q?(curve, point)
-    EllipticCurvesQ.point_on_curve?(curve, point)
+    Core::EllipticCurvesQ.point_on_curve?(curve, point)
   end
 
   def point_addition_q(curve, p, q) # rubocop:disable Naming/MethodParameterName
-    EllipticCurvesQ.point_addition(curve, p, q)
+    Core::EllipticCurvesQ.point_addition(curve, p, q)
   end
 
   def scalar_mul_point_q(curve, n, point)
-    EllipticCurvesQ.scalar_mul_point(curve, n, point)
+    Core::EllipticCurvesQ.scalar_mul_point(curve, n, point)
   end
 
   def isogeny_2deg_q(curve, point_2tor)
-    EllipticCurvesQ.isogeny_2deg(curve, point_2tor)
+    Core::EllipticCurvesQ.isogeny_2deg(curve, point_2tor)
   end
 
   def isogeny_ndeg_q(curve, point_ntor, order)
-    EllipticCurvesQ.isogeny_ndeg(curve, point_ntor, order)
+    Core::EllipticCurvesQ.isogeny_ndeg(curve, point_ntor, order)
   end
 
   def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
-    EllipticCurvesFp.elliptic_curve_fp(p, coefs)
+    Core::EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
 
   def point_on_curve_modp?(curve, point)
-    EllipticCurvesFp.point_on_curve_modp?(curve, point)
+    Core::EllipticCurvesFp.point_on_curve_modp?(curve, point)
   end
 
   def discriminant_modp(curve)
-    EllipticCurvesFp.discriminant_modp(curve)
+    Core::EllipticCurvesFp.discriminant_modp(curve)
   end
 
   def j_invariant_modp(curve)
-    EllipticCurvesFp.j_invariant_modp(curve)
+    Core::EllipticCurvesFp.j_invariant_modp(curve)
   end
 
   def point_addition_modp(curve, p_point, q_point)
-    EllipticCurvesFp.point_addition_modp(curve, p_point, q_point)
+    Core::EllipticCurvesFp.point_addition_modp(curve, p_point, q_point)
   end
 
   def scalar_mul_point_mopd(curve, n, point)
-    EllipticCurvesFp.scalar_mul_point_mopd(curve, n, point)
+    Core::EllipticCurvesFp.scalar_mul_point_mopd(curve, n, point)
   end
 
   def points_fp(curve, point_at_infinity = false) # rubocop:disable Style/OptionalBooleanParameter
-    EllipticCurvesFp.points(curve, point_at_infinity)
+    Core::EllipticCurvesFp.points(curve, point_at_infinity)
   end
 
   def cardinality_fp(curve)
-    EllipticCurvesFp.cardinality(curve)
+    Core::EllipticCurvesFp.cardinality(curve)
   end
 
   def quadratic_twist_fp(curve)
-    EllipticCurvesFp.quadratic_twist(curve)
+    Core::EllipticCurvesFp.quadratic_twist(curve)
   end
 end
