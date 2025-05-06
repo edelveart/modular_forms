@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/numeric_helpers/numeric_helpers'
+require_relative '../core/numeric_helpers/numeric_helpers'
 
 module ModularForms
   # ModularForms::EisensteinSeries

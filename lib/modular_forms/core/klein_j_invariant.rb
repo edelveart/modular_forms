@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../numeric_helpers/numeric_helpers'
+require_relative '../core/numeric_helpers/numeric_helpers'
 require_relative 'eisenstein_series'
 require_relative 'dedekind_eta_functions'
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../numeric_helpers/numeric_helpers'
+require_relative '../core/numeric_helpers/numeric_helpers'
 require_relative './elliptic_curves_q'
 
 module ModularForms

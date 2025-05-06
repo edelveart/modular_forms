@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../numeric_helpers/numeric_helpers'
+require_relative '../core/numeric_helpers/numeric_helpers'
 
 module ModularForms
   # ModularForms::DedekindEtaFunctions
@@ -56,3 +56,5 @@ module ModularForms
     end
   end
 end
+
+print ModularForms::DedekindEtaFunctions.dedekind_sum(5, 19)
