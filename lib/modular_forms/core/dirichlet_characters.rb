@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../core/numeric_helpers/numeric_helpers'
+require 'bigdecimal'
 
 module ModularForms
   module Core
@@ -8,6 +9,8 @@ module ModularForms
     #
     # This module provides generators for Dirichlet characters and related topics.
     module DirichletCharacters
+      PI2 = 2 * Math::PI
+
       def self.dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
         NumericHelpers.gcd(a, modq) == 1 ? 1 : 0
       end
@@ -18,6 +21,10 @@ module ModularForms
         return 1 if NumericHelpers.euler_criterion(a, modp)
 
         -1 if !NumericHelpers.euler_criterion(a, modp) # rubocop:disable Style/NegatedIf
+      end
+
+      def self.exponential(a, r, q) # rubocop:disable Naming/MethodParameterName
+        Complex.polar(1, PI2 * (a * r) / q)
       end
     end
   end
