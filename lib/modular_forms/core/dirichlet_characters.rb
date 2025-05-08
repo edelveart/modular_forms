@@ -26,6 +26,14 @@ module ModularForms
       def self.exponential(a, r, q) # rubocop:disable Naming/MethodParameterName
         Complex.polar(1, PI2 * (a * r) / q)
       end
+
+      def self.gauss_sum_triv(q_char, a) # rubocop:disable Naming/MethodParameterName
+        t_a = 0
+        (0..q_char - 1).each do |r|
+          t_a += dirichlet_trivchar(q_char, r) * exponential(a, r, q_char)
+        end
+        t_a.real.to_f.round(2)
+      end
     end
   end
 end
