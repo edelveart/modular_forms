@@ -61,29 +61,30 @@ end
 11. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)`
 12. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)`
 13. `ModularForms.gamma0_index(n)`
-14. `ModularForms.t_gen_matrix(n_power)`
-15. `ModularForms.s_gen_matrix(n_power)`
-16. `ModularForms.u_gen_matrix(mod_n)`
-17. `ModularForms.st_gen_matrix(n_power)`
-18. `ModularForms.product_gen_mats(gen_mat_a, gen_mat_b)`
-19. `ModularForms.dirichlet_trivchar(modq, a)`
-20. `ModularForms.conrey_p_pminus1(modp, a)`
-21. `ModularForms.gauss_sum_triv(dirichlet_q, a)`
-22. `ModularForms.gauss_sum_conrey_p_minus1(dirichlet_q, a, parity)`
-23. `ModularForms.elliptic_curve_q(coefs)`
-24. `ModularForms.discriminant_q(curve)`
-25. `ModularForms.j_invariant_q(curve)`
-26. `ModularForms.point_on_curve_q?(curve, point)`
-27. `ModularForms.point_addition_q(curve, p, q)`
-28. `ModularForms.scalar_mul_point_q(curve, n, point)`
-29. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
-30. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
-31. `ModularForms.elliptic_curve_fp(p, coefs)`
-32. `ModularForms.point_on_curve_modp?(curve, point)`
-33. `ModularForms.discriminant_modp(curve)`
-34. `ModularForms.j_invariant_modp(curve)`
-35. `ModularForms.point_addition_modp(curve, p_point, q_point)`
-36. `ModularForms.scalar_mul_point_mopd(curve, n, point)`
-37. `ModularForms.points_fp(curve, point_at_infinity = false)`
-38. `ModularForms.cardinality_fp(curve)`
-39. `ModularForms.quadratic_twist_fp(curve)`
+14. `ModularForms.gamma1_index(n)`
+15. `ModularForms.t_gen_matrix(n_power)`
+16. `ModularForms.s_gen_matrix(n_power)`
+17. `ModularForms.u_gen_matrix(mod_n)`
+18. `ModularForms.st_gen_matrix(n_power)`
+19. `ModularForms.product_gen_mats(gen_mat_a, gen_mat_b)`
+20. `ModularForms.dirichlet_trivchar(modq, a)`
+21. `ModularForms.conrey_p_pminus1(modp, a)`
+22. `ModularForms.gauss_sum_triv(dirichlet_q, a)`
+23. `ModularForms.gauss_sum_conrey_p_minus1(dirichlet_q, a, parity)`
+24. `ModularForms.elliptic_curve_q(coefs)`
+25. `ModularForms.discriminant_q(curve)`
+26. `ModularForms.j_invariant_q(curve)`
+27. `ModularForms.point_on_curve_q?(curve, point)`
+28. `ModularForms.point_addition_q(curve, p, q)`
+29. `ModularForms.scalar_mul_point_q(curve, n, point)`
+30. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
+31. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
+32. `ModularForms.elliptic_curve_fp(p, coefs)`
+33. `ModularForms.point_on_curve_modp?(curve, point)`
+34. `ModularForms.discriminant_modp(curve)`
+35. `ModularForms.j_invariant_modp(curve)`
+36. `ModularForms.point_addition_modp(curve, p_point, q_point)`
+37. `ModularForms.scalar_mul_point_mopd(curve, n, point)`
+38. `ModularForms.points_fp(curve, point_at_infinity = false)`
+39. `ModularForms.cardinality_fp(curve)`
+40. `ModularForms.quadratic_twist_fp(curve)`
