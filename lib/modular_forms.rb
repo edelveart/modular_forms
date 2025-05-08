@@ -61,6 +61,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::SL2Zgroups.index_gamma0(n)
   end
 
+  def gamma1_index(n)
+    Core::SL2Zgroups.index_gamma1(n)
+  end
+
   def t_gen_matrix(n_power)
     Core::Core::SL2Zgroups.t_matrix(n_power)
   end
