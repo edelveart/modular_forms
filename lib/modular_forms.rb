@@ -93,6 +93,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::DirichletCharacters.gauss_sum_triv(dirichlet_q, a)
   end
 
+  def gauss_sum_conrey_p_minus1(dirichlet_q, a, parity) # rubocop:disable Naming/MethodParameterName
+    Core::DirichletCharacters.gauss_sum_conrey_p_minus1(dirichlet_q, a, parity)
+  end
+
   def elliptic_curve_q(coefs)
     Core::EllipticCurvesQ.elliptic_curve_q(coefs)
   end
