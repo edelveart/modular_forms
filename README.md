@@ -11,8 +11,9 @@ A primer on Modular Forms and their mathematical symmetries, made into music thr
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, such as Eisenstein series, Hecke operators, Dedekind eta functions, Elliptic Curves over Q and F_p, Isogenies or SL_2(Z) matrices, which are often introduced in early number theory courses.
-[See the full list of implemented generators, matrices, and operations below](#implemented-modular-forms-generators-sl2z-matrices-and-associated-operations)
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, including Eisenstein series, Hecke operators, Dedekind eta functions, elliptic curves over Q and Fp, isogenies, Dirichlet characters, and SL_2(Z) matrices, topics typically introduced in early number theory courses.
+
+[See the full list of implemented generators, matrices, and operations below](#implemented-modular-forms-elliptic-curves-sl2z-matrices-and-related-operations)
 
 - **Not optimized for high performance**: This library is designed for creative exploration rather than maximum computational efficiency. It is not a replacement for advanced mathematical software.
 - **Normalized modular functions**: Several of these modular functions are normalized, ensuring consistent and standard q-expansions for musical applications.
@@ -44,7 +45,7 @@ eisenstein_melody = ModularForms.eisenstein_serie(4)
 end
 ```
 
-## Implemented Modular Forms Generators, SL2Z matrices, and Associated Operations
+## Implemented Modular Forms, Elliptic Curves, SL2Z matrices, and Related Operations
 
 <!-- Normalized -->
 1. `ModularForms.eisenstein_serie(weight_k, galois_field = nil)`
@@ -67,20 +68,22 @@ end
 18. `ModularForms.product_gen_mats(gen_mat_a, gen_mat_b)`
 19. `ModularForms.dirichlet_trivchar(modq, a)`
 20. `ModularForms.conrey_p_pminus1(modp, a)`
-21. `ModularForms.elliptic_curve_q(coefs)`
-22. `ModularForms.discriminant_q(curve)`
-23. `ModularForms.j_invariant_q(curve)`
-24. `ModularForms.point_on_curve_q?(curve, point)`
-25. `ModularForms.point_addition_q(curve, p, q)`
-26. `ModularForms.scalar_mul_point_q(curve, n, point)`
-27. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
-28. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
-29. `ModularForms.elliptic_curve_fp(p, coefs)`
-30. `ModularForms.point_on_curve_modp?(curve, point)`
-31. `ModularForms.discriminant_modp(curve)`
-32. `ModularForms.j_invariant_modp(curve)`
-33. `ModularForms.point_addition_modp(curve, p_point, q_point)`
-34. `ModularForms.scalar_mul_point_mopd(curve, n, point)`
-35. `ModularForms.points_fp(curve, point_at_infinity = false)`
-36. `ModularForms.cardinality_fp(curve)`
-37. `ModularForms.quadratic_twist_fp(curve)`
+21. `ModularForms.gauss_sum_triv(dirichlet_q, a)`
+22. `ModularForms.gauss_sum_conrey_p_minus1(dirichlet_q, a, parity)`
+23. `ModularForms.elliptic_curve_q(coefs)`
+24. `ModularForms.discriminant_q(curve)`
+25. `ModularForms.j_invariant_q(curve)`
+26. `ModularForms.point_on_curve_q?(curve, point)`
+27. `ModularForms.point_addition_q(curve, p, q)`
+28. `ModularForms.scalar_mul_point_q(curve, n, point)`
+29. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
+30. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
+31. `ModularForms.elliptic_curve_fp(p, coefs)`
+32. `ModularForms.point_on_curve_modp?(curve, point)`
+33. `ModularForms.discriminant_modp(curve)`
+34. `ModularForms.j_invariant_modp(curve)`
+35. `ModularForms.point_addition_modp(curve, p_point, q_point)`
+36. `ModularForms.scalar_mul_point_mopd(curve, n, point)`
+37. `ModularForms.points_fp(curve, point_at_infinity = false)`
+38. `ModularForms.cardinality_fp(curve)`
+39. `ModularForms.quadratic_twist_fp(curve)`
