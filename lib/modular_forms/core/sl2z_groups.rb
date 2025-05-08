@@ -64,6 +64,16 @@ module ModularForms
         end
         (n * product).to_i
       end
+
+      def self.index_gamma1(n)
+        product = 1
+        (2..n).each do |p|
+          if NumericHelpers.prime_number?(p) && n % p == 0 # rubocop:disable Style/NumericPredicate
+            product *= 1 - Rational(1, p * p)
+          end
+        end
+        (n * n * product).to_i
+      end
     end
   end
 end
