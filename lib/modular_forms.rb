@@ -66,7 +66,7 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   end
 
   def t_gen_matrix(n_power)
-    Core::Core::SL2Zgroups.t_matrix(n_power)
+    Core::SL2Zgroups.t_matrix(n_power)
   end
 
   def s_gen_matrix(n_power)
