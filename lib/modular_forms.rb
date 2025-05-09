@@ -46,7 +46,7 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   end
 
   def j_invariant(prec)
-    KleinJInvariant.modular_j_function(prec)
+    Core::KleinJInvariant.modular_j_function(prec)
   end
 
   def hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)
