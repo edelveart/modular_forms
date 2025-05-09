@@ -13,20 +13,20 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::EisensteinSeries.eisenstein_series(weight_k, gal_f)
   end
 
-  def eisenstein_series_product(weight_k1, weight_k2, precision)
-    Core::EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, precision)
+  def eisenstein_series_product(weight_k1, weight_k2, prec)
+    Core::EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, prec)
   end
 
-  def eisenstein_serie_power(weight_k, power, precision)
-    Core::EisensteinSeries.eisenstein_serie_power(weight_k, power, precision)
+  def eisenstein_serie_power(weight_k, power, prec)
+    Core::EisensteinSeries.eisenstein_serie_power(weight_k, power, prec)
   end
 
   def dedekind_eta_function(m_scale = 1, pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
     Core::DedekindEtaFunctions.eta_function(m_scale, pentagonal_coefs)
   end
 
-  def dedekind_eta_pow(power, precision, m_scale = 1)
-    Core::DedekindEtaFunctions.eta_function_pow(power, precision, m_scale)
+  def dedekind_eta_pow(power, prec, m_scale = 1)
+    Core::DedekindEtaFunctions.eta_function_pow(power, prec, m_scale)
   end
 
   def dedekind_sum(h, k) # rubocop:disable Naming/MethodParameterName
@@ -41,20 +41,20 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::ThetaFunctions.jacobi_theta_function(jacobi_index, square_coefs)
   end
 
-  def jacobi_theta_power(jacobi_index, power, precision)
-    Core::ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, precision)
+  def jacobi_theta_power(jacobi_index, power, prec)
+    Core::ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, prec)
   end
 
-  def j_invariant(precision)
-    KleinJInvariant.modular_j_function(precision)
+  def j_invariant(prec)
+    KleinJInvariant.modular_j_function(prec)
   end
 
-  def hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
-    Core::HeckeOperators.hecke_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)
+  def hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)
+    Core::HeckeOperators.hecke_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)
   end
 
-  def hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)
-    Core::HeckeOperators.hecke_prime_cusp(cusp_form_arr, prime, weight_k, precision)
+  def hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, prec)
+    Core::HeckeOperators.hecke_prime_cusp(cusp_form_arr, prime, weight_k, prec)
   end
 
   def gamma0_index(n)
