@@ -168,4 +168,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   def quadratic_twist_fp(curve)
     Core::EllipticCurvesFp.quadratic_twist(curve)
   end
+
+  def eta_product(eta1, eta2, prec = nil)
+    Core::DedekindEtaFunctions.eta_product(eta1, eta2, prec)
+  end
 end
