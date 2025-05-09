@@ -172,4 +172,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   def eta_product(eta1, eta2, prec = nil)
     Core::DedekindEtaFunctions.eta_product(eta1, eta2, prec)
   end
+
+  def eta_quotient(num_eta, den_eta, prec)
+    Core::DedekindEtaFunctions.eta_quotient(num_eta, den_eta, prec)
+  end
 end
