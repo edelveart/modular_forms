@@ -1,6 +1,6 @@
 # Modular forms
 
-A primer on modular forms and elliptic curves, turned into music through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
+A primer on modular forms and elliptic curves, explored through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
 
 ![Modular Forms - Image](modular_forms.png)
 
@@ -90,5 +90,6 @@ end
 40. `ModularForms.quadratic_twist_fp(curve)`
 41. `ModularForms.eta_product(eta1, eta2, prec = nil)`
 42. `ModularForms.eta_quotient(num_eta, den_eta, prec)`
+43. `ModularForms.analytic_conductor(level_n, weight_k)`
 
 
