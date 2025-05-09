@@ -176,4 +176,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   def eta_quotient(num_eta, den_eta, prec)
     Core::DedekindEtaFunctions.eta_quotient(num_eta, den_eta, prec)
   end
+
+  def analytic_conductor(level_n, weight_k)
+    Core::NewFormInvariants.analytic_conductor(level_n, weight_k)
+  end
 end
