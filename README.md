@@ -88,3 +88,7 @@ end
 38. `ModularForms.points_fp(curve, point_at_infinity = false)`
 39. `ModularForms.cardinality_fp(curve)`
 40. `ModularForms.quadratic_twist_fp(curve)`
+41. `ModularForms.eta_product(eta1, eta2, prec = nil)`
+42. `ModularForms.eta_quotient(num_eta, den_eta, prec)`
+
+
