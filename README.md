@@ -1,6 +1,6 @@
 # Modular forms
 
-A primer on Modular Forms and their mathematical symmetries, made into music through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
+A primer on modular forms and elliptic curves, turned into music through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
 
 ![Modular Forms - Image](modular_forms.png)
 
@@ -11,7 +11,7 @@ A primer on Modular Forms and their mathematical symmetries, made into music thr
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, including Eisenstein series, Hecke operators, Dedekind eta functions, elliptic curves over Q and Fp, isogenies, Dirichlet characters, and SL_2(Z) matrices, topics typically introduced in early number theory courses.
+Given the vastness of the field, we intentionally focused on a limited subset of concepts, including Eisenstein series, Hecke operators, Dedekind eta functions, elliptic curves over Q and F_p,  Dirichlet characters, and SL_2(Z) matrices, topics typically introduced in early number theory courses.
 
 [See the full list of implemented generators, matrices, and operations below](#implemented-modular-forms-elliptic-curves-sl2z-matrices-and-related-operations)
 
@@ -49,17 +49,17 @@ end
 
 <!-- Normalized -->
 1. `ModularForms.eisenstein_serie(weight_k, galois_field = nil)`
-2. `ModularForms.eisenstein_series_product(weight_k1, weight_k2, precision)`
-3. `ModularForms.eisenstein_serie_power(weight_k, power, precision)`
+2. `ModularForms.eisenstein_series_product(weight_k1, weight_k2, prec)`
+3. `ModularForms.eisenstein_serie_power(weight_k, power, prec)`
 4. `ModularForms.dedekind_eta_function(m_scale = 1, pentagonal_coefs = false)`
-5. `ModularForms.dedekind_eta_pow(power, precision, m_scale = 1)`
+5. `ModularForms.dedekind_eta_pow(power, prec, m_scale = 1)`
 6. `ModularForms.dedekind_sum(h, k)`
 7. `ModularForms.ramanujan_tau_function`
 8. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
-9. `ModularForms.jacobi_theta_power(jacobi_index, power, precision)`
-10. `ModularForms.j_invariant(precision)`
-11. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, precision)`
-12. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, precision)`
+9. `ModularForms.jacobi_theta_power(jacobi_index, power, prec)`
+10. `ModularForms.j_invariant(prec)`
+11. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)`
+12. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, prec)`
 13. `ModularForms.gamma0_index(n)`
 14. `ModularForms.gamma1_index(n)`
 15. `ModularForms.t_gen_matrix(n_power)`
