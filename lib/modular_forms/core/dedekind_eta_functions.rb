@@ -44,6 +44,10 @@ module ModularForms
         NumericHelpers.linear_convolve(eta1, eta2, prec)
       end
 
+      def self.eta_quotient(num_eta, den_eta, prec)
+        NumericHelpers.quotient_of_series(num_eta, den_eta, prec)
+      end
+
       def self.centered_fractional_part(num, den)
         return 0 if num % den == 0 # rubocop:disable Style/NumericPredicate
 
