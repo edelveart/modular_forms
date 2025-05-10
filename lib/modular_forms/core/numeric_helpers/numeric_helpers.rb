@@ -112,6 +112,11 @@ module ModularForms
         a, m = m, a % m while m != 0
         a.abs
       end
+
+      def self.q_height(q_number)
+        x, y = q_number
+        [x.abs, y.abs].max
+      end
     end
   end
 end
