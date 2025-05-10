@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../core/numeric_helpers/numeric_helpers'
+
 module ModularForms
   module Core
     # ModularForms::Core::EllipticCurves
@@ -106,6 +108,12 @@ module ModularForms
         a_isog = a - 5 * t
         b_isog = b - 7 * w
         elliptic_curve_q([a_isog, b_isog])
+      end
+
+      def self.height_naive(x_point)
+        return 0 if x_point == nil # rubocop:disable Style/NilComparison
+
+        Math.log(NumericHelpers.q_height(x_point))
       end
     end
   end
