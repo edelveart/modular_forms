@@ -133,6 +133,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::EllipticCurvesQ.isogeny_ndeg(curve, point_ntor, order)
   end
 
+  def naive_height(x_point)
+    Core::EllipticCurvesQ.height_naive(x_point)
+  end
+
   def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
     Core::EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
