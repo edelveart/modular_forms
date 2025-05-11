@@ -80,17 +80,18 @@ end
 30. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
 31. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
 32. `ModularForms.weil_height(x_point)`
-33. `ModularForms.elliptic_curve_fp(p, coefs)`
-34. `ModularForms.point_on_curve_modp?(curve, point)`
-35. `ModularForms.discriminant_modp(curve)`
-36. `ModularForms.j_invariant_modp(curve)`
-37. `ModularForms.point_addition_modp(curve, p_point, q_point)`
-38. `ModularForms.scalar_mul_point_mopd(curve, n, point)`
-39. `ModularForms.points_fp(curve, point_at_infinity = false)`
-40. `ModularForms.cardinality_fp(curve)`
-41. `ModularForms.quadratic_twist_fp(curve)`
-42. `ModularForms.eta_product(eta1, eta2, prec = nil)`
-43. `ModularForms.eta_quotient(num_eta, den_eta, prec)`
-44. `ModularForms.analytic_conductor(level_n, weight_k)`
+33. `ModularForms.canonical_height(curve, point, prec = 64)`
+34. `ModularForms.elliptic_curve_fp(p, coefs)`
+35. `ModularForms.point_on_curve_modp?(curve, point)`
+36. `ModularForms.discriminant_modp(curve)`
+37. `ModularForms.j_invariant_modp(curve)`
+38. `ModularForms.point_addition_modp(curve, p_point, q_point)`
+39. `ModularForms.scalar_mul_point_mopd(curve, n, point)`
+40. `ModularForms.points_fp(curve, point_at_infinity = false)`
+41. `ModularForms.cardinality_fp(curve)`
+42. `ModularForms.quadratic_twist_fp(curve)`
+43. `ModularForms.eta_product(eta1, eta2, prec = nil)`
+44. `ModularForms.eta_quotient(num_eta, den_eta, prec)`
+45. `ModularForms.analytic_conductor(level_n, weight_k)`
 
 
