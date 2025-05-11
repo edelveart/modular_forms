@@ -137,6 +137,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::EllipticCurvesQ.weil_height(x_point)
   end
 
+  def canonical_height(curve, point, prec = 64)
+    Core::EllipticCurvesQ.canonical_height(curve, point, prec)
+  end
+
   def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
     Core::EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
