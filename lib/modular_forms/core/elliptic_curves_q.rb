@@ -115,6 +115,14 @@ module ModularForms
 
         Math.log(NumericHelpers.q_height(x_point))
       end
+
+      def self.canonical_height(curve, point, prec = 64)
+        n = prec
+        dim = 1 # To be implemented in a new module for ECurves over extensions of the rationals
+        two_pow_n = scalar_mul_point(curve, n, point)[0]
+        Rational(1, dim) * (weil_height([two_pow_n.numerator,
+                                         two_pow_n.denominator]) * n**-2)
+      end
     end
   end
 end
