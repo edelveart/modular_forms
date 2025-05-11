@@ -79,7 +79,7 @@ end
 29. `ModularForms.scalar_mul_point_q(curve, n, point)`
 30. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
 31. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
-32. `ModularForms.naive_height(x_point)`
+32. `ModularForms.weil_height(x_point)`
 33. `ModularForms.elliptic_curve_fp(p, coefs)`
 34. `ModularForms.point_on_curve_modp?(curve, point)`
 35. `ModularForms.discriminant_modp(curve)`
