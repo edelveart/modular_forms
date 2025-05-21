@@ -25,11 +25,11 @@ class TestModularForms < Minitest::Test
   end
 
   def test_invalid_point_on_curve_q?
+    x = Rational(13, 15)
+    y = Rational(-383, 100)
     ec = ModularForms.elliptic_curve_q([0, -2])
-    x = 0
-    y = -2
     assert_raises("Coordinates [#{x},#{y}] do not define a point on curve") do
-      ModularForms.point_on_curve_q?(ec, [Rational(13, 15), Rational(-383, 100)])
+      ModularForms.point_on_curve_q?(ec, [x, y])
     end
   end
 
