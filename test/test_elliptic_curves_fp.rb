@@ -4,8 +4,7 @@ require 'minitest/autorun'
 require_relative '../lib/modular_forms'
 
 class TestModularForms < Minitest::Test
-  P = [2, 2].freeze
-
+  P_FP = [2, 2].freeze
   def test_elliptic_curve_fp
     actual = ModularForms.elliptic_curve_fp(5, [1, 2])
     assert_equal({ a: 1, b: 2, p: 5 }, actual)
@@ -48,7 +47,7 @@ class TestModularForms < Minitest::Test
 
   def test_point_addition_fp
     ec = ModularForms.elliptic_curve_fp(5, [4, 3])
-    actual = ModularForms.point_addition_modp(ec, P, P)
+    actual = ModularForms.point_addition_modp(ec, P_FP, P_FP)
     assert_equal([2, 3], actual)
   end
 
@@ -58,7 +57,7 @@ class TestModularForms < Minitest::Test
     assert_equal([5, 3], actual)
   end
 
-  def test_scalar_points_fp
+  def test_points_fp
     ec = ModularForms.elliptic_curve_fp(11, [7, 3])
     actual = ModularForms.points_fp(ec, true)
     assert_equal(
