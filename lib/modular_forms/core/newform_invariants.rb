@@ -32,7 +32,7 @@ module ModularForms
         psi = digamma_func(Rational(weight_k, 2))
         num = Math.exp(psi)
         den = 2 * Math::PI
-        (level_n * (num / den)**2).round(11)
+        (level_n * (num / den)**2).round(12)
       end
     end
   end
