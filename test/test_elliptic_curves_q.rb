@@ -4,6 +4,7 @@ require 'minitest/autorun'
 require_relative '../lib/modular_forms'
 
 class TestModularForms < Minitest::Test
+  P = [Rational(129, 100), Rational(-383, 1000)].freeze
   def test_elliptic_curve_q
     actual = ModularForms.elliptic_curve_q([0, 2])
     assert_equal({ a: 0, b: 2 }, actual)
@@ -19,7 +20,7 @@ class TestModularForms < Minitest::Test
 
   def test_point_on_curve_q?
     ec = ModularForms.elliptic_curve_q([0, -2])
-    actual = ModularForms.point_on_curve_q?(ec, [Rational(129, 100), Rational(-383, 1000)])
+    actual = ModularForms.point_on_curve_q?(ec, P)
     assert_equal(true, actual)
   end
 
@@ -45,16 +46,14 @@ class TestModularForms < Minitest::Test
   end
 
   def test_point_addition_q
-    p = [Rational(129, 100), Rational(-383, 1000)]
     ec = ModularForms.elliptic_curve_q([0, -2])
-    actual = ModularForms.point_addition_q(ec, p, p)
+    actual = ModularForms.point_addition_q(ec, P, P)
     assert_equal([Rational(2_340_922_881, 58_675_600), Rational(113_259_286_337_279, 449_455_096_000)], actual)
   end
 
   def test_scalar_mul_point_q # rubocop:disable Metrics/MethodLength
-    p = [Rational(129, 100), Rational(-383, 1000)]
     ec = ModularForms.elliptic_curve_q([0, -2])
-    actual = ModularForms.scalar_mul_point_q(ec, 5, p)
+    actual = ModularForms.scalar_mul_point_q(ec, 5, P)
     assert_equal(
       [
         Rational(29_167_882_803_130_958_433_397_234_917_019_400_842_240_735_627_664_950_533_249,
@@ -70,17 +69,23 @@ class TestModularForms < Minitest::Test
     ec = ModularForms.elliptic_curve_q([1, 2])
     p_order_two = [-1, 0]
     actual = ModularForms.isogeny_2deg_q(ec, p_order_two)
-    assert_equal(
-      { a: -19, b: 30 }, actual
-    )
+    assert_equal({ a: -19, b: 30 }, actual)
   end
 
   def test_isogeny_ndeg_q
     ec = ModularForms.elliptic_curve_q([1, 2])
     torsion_point = [1, -2]
     actual = ModularForms.isogeny_ndeg_q(ec, torsion_point, 4)
-    assert_equal(
-      { a: -59, b: -138 }, actual
-    )
+    assert_equal({ a: -59, b: -138 }, actual)
+  end
+
+  def test_canonical_height
+    ec = ModularForms.elliptic_curve_q([2, 3])
+    generator = ModularForms.canonical_height(ec, [Rational(3, 1), Rational(6, 1)], 200)
+    assert_equal(1.4494, generator.round(4))
+
+    generator2 = [Rational(-23, 144), Rational(2827, 1728)]
+    actual = ModularForms.canonical_height(ec, generator2)
+    assert_equal(5.7977, actual.round(4))
   end
 end
