@@ -13,7 +13,7 @@ class TestModularForms < Minitest::Test # rubocop:disable Metrics/ClassLength
   def test_t_gen_matrix
     T_CASES.each do |n_power, expected|
       actual = ModularForms.t_gen_matrix(n_power)
-      assert_equal(expected, actual, "Failed for n_power = #{n_power}")
+      assert_equal(expected, actual, "Failed for t_gen_matrix with n_power = #{n_power}")
     end
   end
 
@@ -30,7 +30,7 @@ class TestModularForms < Minitest::Test # rubocop:disable Metrics/ClassLength
   def test_s_gen_matrix
     S_CASES.each do |n_power, expected|
       actual = ModularForms.s_gen_matrix(n_power)
-      assert_equal(expected, actual, "Failed for s_matrix with n_power = #{n_power}")
+      assert_equal(expected, actual, "Failed for s_gen_matrix with n_power = #{n_power}")
     end
   end
 
@@ -49,7 +49,7 @@ class TestModularForms < Minitest::Test # rubocop:disable Metrics/ClassLength
   def test_st_gen_matrix
     ST_CASES.each do |n_power, expected|
       actual = ModularForms.st_gen_matrix(n_power)
-      assert_equal(expected, actual, "Failed for st_matrix with n_power = #{n_power}")
+      assert_equal(expected, actual, "Failed for st_gen_matrix with n_power = #{n_power}")
     end
   end
 
@@ -65,7 +65,7 @@ class TestModularForms < Minitest::Test # rubocop:disable Metrics/ClassLength
   def test_u_gen_matrix
     U_CASES.each do |n_power_mod, expected|
       actual = ModularForms.u_gen_matrix(n_power_mod)
-      assert_equal(expected, actual, "Failed for u_matrix with n_power_mod = #{n_power_mod}")
+      assert_equal(expected, actual, "Failed for u__gen_matrix with n_power_mod = #{n_power_mod}")
     end
   end
 
@@ -93,9 +93,9 @@ class TestModularForms < Minitest::Test # rubocop:disable Metrics/ClassLength
   ].freeze
 
   def test_product_gen_mats
-    PRODUCT_CASES.each_with_index do |test_case, index|
+    PRODUCT_CASES.each do |test_case|
       actual = ModularForms.product_gen_mats(test_case[:gen_mat_a], test_case[:gen_mat_b])
-      assert_equal(test_case[:expected], actual, "Failed for test case #{index + 1}")
+      assert_equal(test_case[:expected], actual)
     end
   end
 
