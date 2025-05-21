@@ -65,4 +65,22 @@ class TestModularForms < Minitest::Test
       ], actual
     )
   end
+
+  def test_isogeny_2deg_q
+    ec = ModularForms.elliptic_curve_q([1, 2])
+    p_order_two = [-1, 0]
+    actual = ModularForms.isogeny_2deg_q(ec, p_order_two)
+    assert_equal(
+      { a: -19, b: 30 }, actual
+    )
+  end
+
+  def test_isogeny_ndeg_q
+    ec = ModularForms.elliptic_curve_q([1, 2])
+    torsion_point = [1, -2]
+    actual = ModularForms.isogeny_ndeg_q(ec, torsion_point, 4)
+    assert_equal(
+      { a: -59, b: -138 }, actual
+    )
+  end
 end
