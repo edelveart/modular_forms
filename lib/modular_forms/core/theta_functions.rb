@@ -22,7 +22,7 @@ module ModularForms
         end
       end
 
-      def self.jacobi_theta_function_power(jacobi_index, power, precision)
+      def self.jacobi_theta_function_pow(jacobi_index, power, precision)
         vec = jacobi_theta_function(jacobi_index).take(precision)
         theta_q_coefs = [1]
         power.times do

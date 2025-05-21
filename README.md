@@ -1,6 +1,6 @@
 # Modular forms
 
-A primer on modular forms and elliptic curves, explored through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
+A primer on modular forms and elliptic curves through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
 
 ![Modular Forms - Image](modular_forms.png)
 
@@ -48,15 +48,15 @@ end
 ## Implemented Modular Forms, Elliptic Curves, SL2Z matrices, and Related Operations
 
 <!-- Normalized -->
-1. `ModularForms.eisenstein_serie(weight_k, galois_field = nil)`
+1. `ModularForms.eisenstein_series(weight_k, galois_field = nil)`
 2. `ModularForms.eisenstein_series_product(weight_k1, weight_k2, prec)`
-3. `ModularForms.eisenstein_serie_power(weight_k, power, prec)`
+3. `ModularForms.eisenstein_series_pow(weight_k, power, prec)`
 4. `ModularForms.dedekind_eta_function(m_scale = 1, pentagonal_coefs = false)`
 5. `ModularForms.dedekind_eta_pow(power, prec, m_scale = 1)`
 6. `ModularForms.dedekind_sum(h, k)`
 7. `ModularForms.ramanujan_tau_function`
 8. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
-9. `ModularForms.jacobi_theta_power(jacobi_index, power, prec)`
+9. `ModularForms.jacobi_theta_function_pow(jacobi_index, power, prec)`
 10. `ModularForms.j_invariant(prec)`
 11. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)`
 12. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, prec)`

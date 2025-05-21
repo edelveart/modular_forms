@@ -9,7 +9,7 @@ require_relative './modular_forms/core'
 module ModularForms # rubocop:disable Metrics/ModuleLength
   module_function
 
-  def eisenstein_serie(weight_k, gal_f = nil)
+  def eisenstein_series(weight_k, gal_f = nil)
     Core::EisensteinSeries.eisenstein_series(weight_k, gal_f)
   end
 
@@ -17,8 +17,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::EisensteinSeries.eisenstein_series_product(weight_k1, weight_k2, prec)
   end
 
-  def eisenstein_serie_power(weight_k, power, prec)
-    Core::EisensteinSeries.eisenstein_serie_power(weight_k, power, prec)
+  def eisenstein_series_pow(weight_k, power, prec)
+    Core::EisensteinSeries.eisenstein_series_pow(weight_k, power, prec)
   end
 
   def dedekind_eta_function(m_scale = 1, pentagonal_coefs = false) # rubocop:disable Style/OptionalBooleanParameter
@@ -41,8 +41,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::ThetaFunctions.jacobi_theta_function(jacobi_index, square_coefs)
   end
 
-  def jacobi_theta_power(jacobi_index, power, prec)
-    Core::ThetaFunctions.jacobi_theta_function_power(jacobi_index, power, prec)
+  def jacobi_theta_function_pow(jacobi_index, power, prec)
+    Core::ThetaFunctions.jacobi_theta_function_pow(jacobi_index, power, prec)
   end
 
   def j_invariant(prec)
