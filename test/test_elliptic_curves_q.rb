@@ -79,6 +79,11 @@ class TestModularForms < Minitest::Test
     assert_equal({ a: -59, b: -138 }, actual)
   end
 
+  def test_weil_height
+    x_point = P[0]
+    assert_equal(4.859812404361672, ModularForms.weil_height([x_point.numerator, x_point.denominator]))
+  end
+
   def test_canonical_height
     ec = ModularForms.elliptic_curve_q([2, 3])
     generator = ModularForms.canonical_height(ec, [Rational(3, 1), Rational(6, 1)], 200)
