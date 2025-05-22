@@ -45,8 +45,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::ThetaFunctions.jacobi_theta_function_pow(jacobi_index, power, prec)
   end
 
-  def j_invariant(prec)
-    Core::KleinJInvariant.modular_j_function(prec)
+  def j_function(prec)
+    Core::KleinJInvariant.j_function(prec)
   end
 
   def hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)
