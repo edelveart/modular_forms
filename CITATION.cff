@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software and its documentation, please cite it as below."
+authors:
+  - family-names: "Delgado Vega"
+    given-names: "Edgar Armando"
+    orcid: "https://orcid.org/0000-0002-9672-9087"
+title: "Modular Forms: A Creative Toolkit with Sonic Pi"
+version: 0.1.0
+doi:
+date-released: 2025-05-22
+url: "https://github.com/edelveart/modular_forms"
+repository-code: "https://github.com/edelveart/modular_forms"
+license: MIT

@@ -1,22 +1,22 @@
 # Modular forms
 
-A primer on modular forms and elliptic curves through algorithmic composition and live coding with [Sonic Pi](https://sonic-pi.net/).
+A creative toolkit for exploring modular forms and elliptic curves through algorithmic composition and live coding using [Sonic Pi](https://sonic-pi.net/).
 
 ![Modular Forms - Image](modular_forms.png)
 
 ## Features
 
-- **Accessible to both musicians and coders**: No need to be a math expert to jump in. Whether you are a musician curious about code or a coder intrigued by sound, this tool lets you explore modular forms in a creative and intuitive way. Create musical patterns, rhythms, timbres, and harmonies while experimenting with mathematical concepts like they were instruments.
-- **Interactive Educational Tool**: Use **Sonic Pi** to teach number theory concepts in a hands-on and immersive way. Allow students to experiment with live coding, hear math in action, and gain insights into abstract concepts through the medium of sound.
+- **Accessible to both musicians and coders**: No need to be a math expert to jump in. Whether you're a musician curious about code or a coder intrigued by sound, this toolkit lets you delve into modular forms and elliptic curves in a creative and intuitive way. Create musical patterns, rhythms, timbres, and harmonies while experimenting with mathematical concepts as if they were instruments.
+- **Interactive Educational Resource**: Use **Sonic Pi** to discover number theory concepts in a hands-on and immersive way. Experiment with live coding, hear math in action, and gain insights into abstract ideas through the medium of sound.
 
 ## Purpose and Scope
 
-Given the vastness of the field, we intentionally focused on a limited subset of concepts, including Eisenstein series, Hecke operators, Dedekind eta functions, elliptic curves over Q and F_p,  Dirichlet characters, and SL_2(Z) matrices, topics typically introduced in early number theory courses.
+Given the vastness of the field, this tool intentionally focuses on a limited subset of concepts, such as Eisenstein series, Dedekind eta functions, elliptic curves over rationals and finite fields, Hecke operators, Dirichlet characters, and SL_2(Z) matrices. These are topics typically introduced in early number theory courses.
 
 [See the full list of implemented generators, matrices, and operations below](#implemented-modular-forms-elliptic-curves-sl2z-matrices-and-related-operations)
 
-- **Not optimized for high performance**: This library is designed for creative exploration rather than maximum computational efficiency. It is not a replacement for advanced mathematical software.
-- **Normalized modular functions**: Several of these modular functions are normalized, ensuring consistent and standard q-expansions for musical applications.
+- **Not optimized for high performance**: This toolkit is designed for creative exploration rather than maximum computational efficiency. It is not intended to replace advanced mathematical software, but instead draws inspiration from resources like SageMath, Pari/GP, and the LMFDB database.
+- **Normalized q-expansions**: Several of these sequences are normalized, ensuring consistent q-expansions suitable for musical applications.
 
 The goal is simple: to offer an inviting starting point for those who wish to explore, learn, and possibly uncover new ideas, regardless of their mathematical background.
 
@@ -47,7 +47,6 @@ end
 
 ## Implemented Modular Forms, Elliptic Curves, SL2Z matrices, and Related Operations
 
-<!-- Normalized -->
 1. `ModularForms.eisenstein_series(weight_k, galois_field = nil)`
 2. `ModularForms.eisenstein_series_product(weight_k1, weight_k2, prec)`
 3. `ModularForms.eisenstein_series_pow(weight_k, power, prec)`
@@ -93,5 +92,3 @@ end
 43. `ModularForms.eta_product(eta1, eta2, prec = nil)`
 44. `ModularForms.eta_quotient(num_eta, den_eta, prec)`
 45. `ModularForms.analytic_conductor(level_n, weight_k)`
-
-
