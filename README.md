@@ -57,7 +57,7 @@ end
 7. `ModularForms.ramanujan_tau_function`
 8. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
 9. `ModularForms.jacobi_theta_function_pow(jacobi_index, power, prec)`
-10. `ModularForms.j_invariant(prec)`
+10. `ModularForms.j_function(prec)`
 11. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)`
 12. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, prec)`
 13. `ModularForms.gamma0_index(n)`
