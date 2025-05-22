@@ -79,6 +79,7 @@ class TestModularForms < Minitest::Test
     actual = ModularForms.quadratic_twist_fp(ec)
     assert_includes([
                       { a: 6, b: 2, p: 11 },
+                      { a: 2, b: 6, p: 11 },
                       { a: 10, b: 10, p: 11 },
                       { a: 8, b: 7, p: 11 },
                       { a: 7, b: 8, p: 11 }
