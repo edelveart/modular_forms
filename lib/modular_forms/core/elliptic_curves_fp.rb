@@ -13,7 +13,7 @@ module ModularForms
         ((n % modp) + modp) % modp
       end
 
-      def self.elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
+      def self.elliptic_curve_fp(p, coefs)
         a, b = coefs
         raise "#{p} is not a prime number" if NumericHelpers.prime_number?(p) == false
 
@@ -46,7 +46,7 @@ module ModularForms
         reduction_modp(-16 * (4 * a**3 + 27 * b**2), p)
       end
 
-      def self.fermat_inverse_modp(a, p) # rubocop:disable Naming/MethodParameterName
+      def self.fermat_inverse_modp(a, p)
         a.pow(p - 2, p)
       end
 
