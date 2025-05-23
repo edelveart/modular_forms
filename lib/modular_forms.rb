@@ -4,8 +4,12 @@ require_relative './modular_forms/core'
 
 # ModularForms
 #
-# This module provides tools for modular forms, elliptic curves, SL_2(Z) matrices, and Dirichlet characters.
-# It is well-suited for applications in Sonic Pi, particularly for algorithmic music composition and live coding.
+# This module provides a set of tools for working with modular forms and elliptic curves.
+# It is designed for use with Sonic Pi, enabling creative exploration
+# of these mathematical structures and their operations through sound.
+
+# NOTE: While the module is designed for creative exploration, it is not optimized for high
+# performance and should not be considered a replacement for specialized mathematical software.
 module ModularForms # rubocop:disable Metrics/ModuleLength
   module_function
 
@@ -29,7 +33,7 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::DedekindEtaFunctions.eta_function_pow(power, prec, m_scale)
   end
 
-  def dedekind_sum(h, k) # rubocop:disable Naming/MethodParameterName
+  def dedekind_sum(h, k)
     Core::DedekindEtaFunctions.dedekind_sum(h, k)
   end
 
@@ -85,19 +89,19 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::SL2Zgroups.product_gen_matrices(gen_mat_a, gen_mat_b)
   end
 
-  def dirichlet_trivchar(modq, a) # rubocop:disable Naming/MethodParameterName
+  def dirichlet_trivchar(modq, a)
     Core::DirichletCharacters.dirichlet_trivchar(modq, a)
   end
 
-  def conrey_p_pminus1(modp, a) # rubocop:disable Naming/MethodParameterName
+  def conrey_p_pminus1(modp, a)
     Core::DirichletCharacters.conrey_p_pminus1(modp, a)
   end
 
-  def gauss_sum_triv(dirichlet_q, a) # rubocop:disable Naming/MethodParameterName
+  def gauss_sum_triv(dirichlet_q, a)
     Core::DirichletCharacters.gauss_sum_triv(dirichlet_q, a)
   end
 
-  def gauss_sum_conrey_p_minus1(dirichlet_q, a, parity) # rubocop:disable Naming/MethodParameterName
+  def gauss_sum_conrey_p_minus1(dirichlet_q, a, parity)
     Core::DirichletCharacters.gauss_sum_conrey_p_minus1(dirichlet_q, a, parity)
   end
 
@@ -117,7 +121,7 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::EllipticCurvesQ.point_on_curve?(curve, point)
   end
 
-  def point_addition_q(curve, p, q) # rubocop:disable Naming/MethodParameterName
+  def point_addition_q(curve, p, q)
     Core::EllipticCurvesQ.point_addition(curve, p, q)
   end
 
@@ -141,7 +145,7 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::EllipticCurvesQ.canonical_height(curve, point, prec)
   end
 
-  def elliptic_curve_fp(p, coefs) # rubocop:disable Naming/MethodParameterName
+  def elliptic_curve_fp(p, coefs)
     Core::EllipticCurvesFp.elliptic_curve_fp(p, coefs)
   end
 
