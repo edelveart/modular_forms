@@ -52,7 +52,14 @@ gem install modular_forms
 You can dive into the beauty of math, both in Ruby and Sonic Pi, creating music in real-time. Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
 
 ```rb
+# If you are using Ruby, simply load the gem with its name
+# after installing it via 'gem install modular_forms'.
 require 'modular_forms'
+
+# If you are using Sonic Pi, replace <PATH>
+# with the full path to the 'modular_forms.rb' file
+# inside the gem installation on your system.
+require "<PATH>/modular_forms.rb"
 
 # Calculate the Eisenstein series of weight k = 4
 eisenstein_melody = ModularForms.eisenstein_serie(4)
