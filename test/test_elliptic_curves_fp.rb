@@ -51,9 +51,9 @@ class TestModularForms < Minitest::Test
     assert_equal([2, 3], actual)
   end
 
-  def test_scalar_mul_point_mopd
+  def test_scalar_mul_point_modp
     ec = ModularForms.elliptic_curve_fp(11, [7, 3])
-    actual = ModularForms.scalar_mul_point_mopd(ec, 8, [0, 5])
+    actual = ModularForms.scalar_mul_point_modp(ec, 8, [0, 5])
     assert_equal([5, 3], actual)
   end
 
