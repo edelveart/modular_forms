@@ -24,7 +24,7 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 - [Ramanujan Tau Function](#ramanujan-tau-function)
 - [J-Function](#j-function)
 - [Hecke Operators](#hecke-operators)
-- [SL(2,Z) group](#sl2z-group)
+- [SL(2,Z) Group](#sl2z-group)
 - [Dirichlet Characters](#dirichlet-characters)
 - [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
 - [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)

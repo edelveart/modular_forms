@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module ModularForms
-  VERSION = '0.1.0'
+  VERSION = '0.0.5'
 end
