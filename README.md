@@ -7,7 +7,9 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
 ## Project Status
 
 This is a pre-alpha release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
-Future updates might include a DSL, depending on how the library is used and the interest from the community. **Contributions** are welcome! Feel free to fork, make changes, and submit a pull request.
+Future updates might include a DSL, depending on how the library is used and the interest from the community.
+
+Contributions are welcome! Feel free to fork, make changes, and submit a pull request.
 
 ## Features
 
