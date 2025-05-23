@@ -4,7 +4,7 @@ authors:
   - family-names: "Delgado Vega"
     given-names: "Edgar Armando"
     orcid: "https://orcid.org/0000-0002-9672-9087"
-title: "Modular Forms: A Creative Toolkit with Sonic Pi"
+title: "Modular Forms: A Creative Toolkit for Exploring Modular Forms and Elliptic Curves through Sonic Pi"
 version: 0.1.0
 doi:
 date-released: 2025-05-22
