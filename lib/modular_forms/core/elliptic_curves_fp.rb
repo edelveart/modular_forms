@@ -79,7 +79,7 @@ module ModularForms
         [reduction_modp(x3, p), reduction_modp(y3, p)]
       end
 
-      def self.scalar_mul_point_mopd(curve, n, point)
+      def self.scalar_mul_point_modp(curve, n, point)
         n_times_point = nil
         addend = point
 
