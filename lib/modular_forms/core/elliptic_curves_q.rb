@@ -8,7 +8,7 @@ module ModularForms
     #
     # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over Q
     module EllipticCurvesQ
-      def self.discriminant(a, b) # rubocop:disable Naming/MethodParameterName
+      def self.discriminant(a, b)
         -16 * (4 * a**3 + 27 * b**2)
       end
 
@@ -51,7 +51,7 @@ module ModularForms
         1728 * Rational(4 * a**3, 4 * a**3 + 27 * b**2)
       end
 
-      def self.point_addition(curve, p, q) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Naming/MethodParameterName
+      def self.point_addition(curve, p, q) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
         return p if q == nil # rubocop:disable Style/NilComparison
         return q if p == nil # rubocop:disable Style/NilComparison
 
