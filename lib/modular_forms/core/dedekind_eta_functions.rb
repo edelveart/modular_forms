@@ -54,7 +54,7 @@ module ModularForms
         Rational(num, den) - (num / den).floor - Rational(1, 2)
       end
 
-      def self.dedekind_sum(h, k) # rubocop:disable Naming/MethodParameterName
+      def self.dedekind_sum(h, k)
         raise "#{k} parameter must be greater than 0" if k < 1
 
         s = 0
