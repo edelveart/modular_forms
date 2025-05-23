@@ -8,7 +8,7 @@ module ModularForms
     #
     # This module provides methods for applying Hecke operators to modular forms.
     module HeckeOperators
-      def self.hecke_prime_non_cusp(non_cusp_form, p, k, precision) # rubocop:disable Naming/MethodParameterName,Metrics/MethodLength,Metrics/AbcSize
+      def self.hecke_prime_non_cusp(non_cusp_form, p, k, precision) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
         raise ArgumentError, 'p must be a prime number' unless NumericHelpers.prime_number?(p)
 
         q_size = non_cusp_form.length
@@ -25,7 +25,7 @@ module ModularForms
         end
       end
 
-      def self.hecke_prime_cusp(cusp_form, p, k, precision) # rubocop:disable Naming/MethodParameterName,Metrics/MethodLength,Metrics/AbcSize
+      def self.hecke_prime_cusp(cusp_form, p, k, precision) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
         raise ArgumentError, 'p must be a prime number' unless NumericHelpers.prime_number?(p)
 
         q_size = cusp_form.length
