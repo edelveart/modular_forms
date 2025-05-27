@@ -192,4 +192,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   def analytic_conductor(level_n, weight_k)
     Core::NewFormInvariants.analytic_conductor(level_n, weight_k)
   end
+
+  def a_p(p, cardinality)
+    Core::LFunctions.a_p(p, cardinality)
+  end
 end
