@@ -2,21 +2,28 @@
 
 A creative toolkit for exploring modular forms and elliptic curves through [Sonic Pi](https://sonic-pi.net/).
 
-![Modular Forms - Image](modular_forms.png)
+<p align="center">
+  <img src="https://img.shields.io/gem/v/modular_forms" alt="Gem Version">
+  <img src="https://img.shields.io/gem/dt/modular_forms" alt="Gem Total Downloads">
+  <img src="https://img.shields.io/github/stars/edelveart/modular_forms" alt="GitHub Repo stars">
+  <img src="https://img.shields.io/github/license/edelveart/modular_forms" alt="GitHub License">
+</p>
 
-## Project Status
+[![Modular Forms - Image](https://raw.githubusercontent.com/edelveart/modular_forms/main/modular_forms.png)](https://rubygems.org/gems/modular_forms)
+
+## ⚙️ Project Status
 
 This is a pre-alpha release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
 Future updates might include a DSL, depending on how the library is used and the interest from the community.
 
-Contributions are welcome! Feel free to fork, make changes, and submit a pull request.
+Contributions are welcome! Feel free to fork and submit a pull request.
 
-## Features
+## 🧊 Features
 
 - **Accessible to both musicians and coders**: No math expertise required. Create musical patterns, rhythms, timbres, and harmonies by experimenting with mathematical ideas and turning them into sound and effects intuitively.
 - **Interactive Educational Resource**: Use **Sonic Pi** to discover introductory number theory in a hands-on, immersive way, gaining insights into abstract concepts through math in action.
 
-## Purpose and Scope
+### Purpose and Scope
 
 Given the vastness of the field, this tool intentionally focuses on a limited subset of definitions, without covering all aspects of each. Below is a list of the implemented modules:
 
@@ -31,15 +38,16 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 - [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
 - [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)
 - [Newforms Invariants](#newforms-invariants)
+- [L-functions](#l-functions)
 
 ### Not Optimized for Computational Efficiency
 
-This library is designed for creative exploration rather than maximum computational efficiency. It is not intended to replace advanced mathematical software. Instead, it draws inspiration from tools like SageMath, Pari/GP, and the LMFDB database.
+This library is designed for creative exploration rather than maximum computational efficiency. It is not intended to replace advanced mathematical software. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
 
 ### Goal
 The goal is simple: to provide an accessible and creative starting point for those who wish to explore, learn, and uncover new ideas, regardless of their mathematical background.
 
-## Installation
+## 💎 Installation
 
 You can install the `modular_forms` gem directly from **RubyGems** or clone it from GitHub.
 
@@ -47,21 +55,27 @@ You can install the `modular_forms` gem directly from **RubyGems** or clone it f
 gem install modular_forms
 ```
 
-## How to use?
+If you are **use Ruby**, then import via
+```rb
+require 'modular_forms'
+```
 
-You can dive into the beauty of math, both in Ruby and Sonic Pi, creating music in real-time. Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
+If you are **using Sonic Pi**, replace `<PATH>` with the directory path to the `modular_forms.rb` file inside the gem installation on your system:
 
 ```rb
-# If you are using Ruby, simply load the gem with its name
-# after installing it via 'gem install modular_forms'.
-require 'modular_forms'
+require "<PATH>/modular_forms.rb"
+```
 
-# If you are using Sonic Pi, replace <PATH>
-# with the full path to the 'modular_forms.rb' file
-# inside the gem installation on your system.
+## 🧰 How to use?
+
+### 🎶 Play an Eisenstein Series as Music for Warm-Up
+
+Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
+
+```rb
 require "<PATH>/modular_forms.rb"
 
-# Calculate the Eisenstein series of weight k = 4
+# Generate an Eisenstein series of weight k = 4
 eisenstein_melody = ModularForms.eisenstein_serie(4)
 
 # Play the melody in a loop with a mathematical transformation
@@ -71,7 +85,44 @@ eisenstein_melody = ModularForms.eisenstein_serie(4)
 end
 ```
 
-## Implemented Modular Forms, Elliptic Curves, and Related Definitions
+### 🎶 Explore Fermat’s Last Theorem in Sonic Pi
+
+The Taniyama–Shimura Conjecture (now the Modularity Theorem), proven for semistable cases by Andrew Wiles, connects elliptic curves over the rationals to modular forms. This profound result was crucial in proving **Fermat’s Last Theorem**.
+
+For example, we can explore the relationship between the elliptic curve `144.a3` and the newform orbit `144.2.a.a` through their L-function,
+`L(E, s) = L(f, s)`, in a musical sense.
+
+```rb
+require "<PATH>/modular_forms.rb"
+
+# Set precision for the Fourier q-expansion
+prec = 20
+
+# Construct a weight 2 newform as an eta quotient
+n = ModularForms.dedekind_eta_pow(12, prec, 12)
+d1 = ModularForms.dedekind_eta_pow(4, prec, 6)
+d2 = ModularForms.dedekind_eta_pow(4, prec, 24)
+eta_prod = ModularForms.eta_product(d1, d2)
+
+newform = ModularForms.eta_quotient(n, eta_prod, prec)
+
+# Define the elliptic curve E over F_p
+p = 13
+ellc = ModularForms.elliptic_curve_fp(p, [0, -1]) # y^2 = x^3 - 1
+points = ModularForms.cardinality_fp(ellc) # count points on E mod p
+
+# Compute the modular coefficient a_p of L-function(E, s)
+a_p = ModularForms.a_p(p, points)
+
+# Sonify the modular relationship
+live_loop :modularity_music do
+  play (chord (:a3 + a_p), :m11)[newform.ring.tick],
+    amp: a_p, release: 0.125
+  sleep 0.125
+end
+```
+
+## 🧩 Implemented Modular Forms, Elliptic Curves, and Related Definitions
 
 ### Eisenstein Series
 
@@ -148,5 +199,9 @@ end
 44. `ModularForms.quadratic_twist_fp(curve)`
 
 ### Newforms Invariants
+
 45. `ModularForms.analytic_conductor(level_n, weight_k)`
 
+### L-functions
+
+46. `ModularForms.a_p(p, cardinality)`
