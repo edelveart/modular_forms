@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.0.0'
 
-  s.extra_rdoc_files = Dir['README.md', 'LICENSE.txt']
+  s.extra_rdoc_files = Dir['README.md', 'LICENSE']
   s.rdoc_options    += [
     '--main', 'README.md',
     '--line-numbers',
