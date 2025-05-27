@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative '../core/numeric_helpers/numeric_helpers'
-require 'bigdecimal'
 
 module ModularForms
   module Core
