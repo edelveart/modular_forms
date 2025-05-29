@@ -25,7 +25,7 @@ module ModularForms
         1.0 / p**power
       end
 
-      def padic_expansion(num_b10, p, prec = 11, reverse_trim = false) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Style/OptionalBooleanParameter
+      def self.padic_expansion(num_b10, p, prec = 11, reverse_trim = false) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Style/OptionalBooleanParameter
         inverse_limit_arr = []
         (1...prec).each do |index|
           power = p**index
