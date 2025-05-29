@@ -17,6 +17,13 @@ module ModularForms
         index += 1 while base_ten_number % (p**index) == 0 # rubocop:disable Style/NumericPredicate
         index - 1
       end
+
+      def self.padic_norm(base_ten_number, p)
+        return 0 if base_ten_number == 0 # rubocop:disable Style/NumericPredicate
+
+        power = padic_valuation(base_ten_number, p)
+        1.0 / p**power
+      end
     end
   end
 end
