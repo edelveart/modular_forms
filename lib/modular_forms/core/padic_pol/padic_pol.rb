@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
+require_relative './data_pol_2deg'
+
 module ModularForms
   module Core
     module PAdicFields
-      # ModularForms::Core::PAdicFields::PAdicPol
+      # ModularForms::Core::PAdicPol
       #
       # Provides a constructor for a hash of defining polynomials of finite extensions of p-adic fields.
       module PAdicPol
-        require_relative './data_pol_2deg'
-
         def self.build_padic_label_hash(data_padic)
           padic_coefs_by_label = {}
           data_padic.each do |label, coefs|
