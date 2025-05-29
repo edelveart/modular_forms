@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'prime'
+require_relative './padic_pol/padic_pol'
 
 module ModularForms
   module Core
@@ -49,6 +50,18 @@ module ModularForms
         else
           p_adic_expansion_array
         end
+      end
+
+      def self.def_pol_2deg(p = 2, c = 0, num = 1)
+        raise ArgumentError, "Residue field characteristic #{p} must be a prime number" unless Prime.prime?(p)
+
+        unless (0..3).include?(c)
+          raise ArgumentError,
+                "The specified discriminant exponent (#{c}) is invalid. Must be in range (0..3)."
+        end
+        raise ArgumentError, "Invalid value: #{num}. Must be in range (1..4)." unless (1..4).include?(num)
+
+        PAdicPol.get_defining_polynomial(PAdicPol::DEF_POL_HASH_2DEG, p, c, num)
       end
     end
   end
