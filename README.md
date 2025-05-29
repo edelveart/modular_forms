@@ -43,7 +43,7 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 
 ### Not Optimized for Computational Efficiency
 
-This library is designed for creative exploration rather than maximum computational efficiency. It is not intended to replace advanced mathematical software. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
+This library is designed for creative exploration rather than maximum computational efficiency. It is **not intended** to replace specialized mathematical software optimized for heavy or large-scale computations. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
 
 ### Goal
 The goal is simple: to provide an accessible and creative starting point for those who wish to explore, learn, and uncover new ideas, regardless of their mathematical background.
@@ -213,3 +213,18 @@ end
 48. `ModularForms.padic_norm(num_b10, p)`
 49. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
 50. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
+
+## 🧪 Testing
+
+Install dependencies first:
+
+```bash
+bundle install
+```
+
+This project features a comprehensive Minitest suite covering core functionality across modules. While not all edge cases are tested, the main mathematical functions are well validated to ensure correctness and stability.
+
+Run tests with:
+```bash
+rake test
+```
