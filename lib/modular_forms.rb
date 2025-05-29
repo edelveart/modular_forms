@@ -196,4 +196,20 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   def a_p(p, cardinality)
     Core::LFunctions.a_p(p, cardinality)
   end
+
+  def padic_valuation(num_b10, p)
+    Core::PAdicFields.padic_valuation(num_b10, p)
+  end
+
+  def padic_norm(num_b10, p)
+    Core::PAdicFields.padic_norm(num_b10, p)
+  end
+
+  def padic_expansion(num_b10, p, prec = 11, reverse_trim = false) # rubocop:disable Style/OptionalBooleanParameter
+    Core::PAdicFields.padic_expansion(num_b10, p, prec, reverse_trim)
+  end
+
+  def def_pol_2deg(p = 2, c = 0, num = 1)
+    Core::PAdicFields.def_pol_2deg(p, c, num)
+  end
 end
