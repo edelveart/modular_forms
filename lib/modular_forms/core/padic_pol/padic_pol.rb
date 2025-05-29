@@ -38,7 +38,7 @@ module ModularForms
         end
 
         def self.get_defining_polynomial(hash, p, z, w)
-          gen_quadratic_pol_string(hash.dig(p, z, w)).inspect
+          gen_quadratic_pol_string(hash.dig(p, z, w))
         end
 
         DEF_POL_HASH_2DEG = build_padic_label_hash(DATA_POL_2DEG)
