@@ -76,7 +76,7 @@ Here is a simple example of how to use **modular_forms** to generate a basic mus
 require "<PATH>/modular_forms.rb"
 
 # Generate an Eisenstein series of weight k = 4
-eisenstein_melody = ModularForms.eisenstein_serie(4)
+eisenstein_melody = ModularForms.eisenstein_series(4)
 
 # Play the melody in a loop with a mathematical transformation
 120.times do
