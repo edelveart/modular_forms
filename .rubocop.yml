@@ -13,4 +13,6 @@ Naming/MethodParameterName:
     - m
     - r
     - p
+    - w
+    - c
   Enabled: true
