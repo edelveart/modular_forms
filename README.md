@@ -29,7 +29,7 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 
 - [Eisenstein Series](#eisenstein-series)
 - [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
-- [Theta functions](#theta-functions)
+- [Theta Functions](#theta-functions)
 - [Ramanujan Tau Function](#ramanujan-tau-function)
 - [J-Function](#j-function)
 - [Hecke Operators](#hecke-operators)
@@ -37,8 +37,9 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 - [Dirichlet Characters](#dirichlet-characters)
 - [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
 - [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)
-- [Newforms Invariants](#newforms-invariants)
+- [Newform Invariants](#newform-invariants)
 - [L-functions](#l-functions)
+- [p-adic Fields](#p-adic-fields)
 
 ### Not Optimized for Computational Efficiency
 
@@ -138,7 +139,7 @@ end
 7. `ModularForms.eta_product(eta1, eta2, prec = nil)`
 8.  `ModularForms.eta_quotient(num_eta, den_eta, prec)`
 
-### Theta functions
+### Theta Functions
 
 9. `ModularForms.jacobi_theta_function(jacobi_index = 3, square_coefs = false)`
 10.  `ModularForms.jacobi_theta_function_pow(jacobi_index, power, prec)`
@@ -156,7 +157,7 @@ end
 13. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)`
 14. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, prec)`
 
-### SL(2,Z) Group
+### SL(2,ℤ) Group
 
 15. `ModularForms.t_gen_matrix(n_power)`
 16. `ModularForms.s_gen_matrix(n_power)`
@@ -198,10 +199,17 @@ end
 43. `ModularForms.cardinality_fp(curve)`
 44. `ModularForms.quadratic_twist_fp(curve)`
 
-### Newforms Invariants
+### Newform Invariants
 
 45. `ModularForms.analytic_conductor(level_n, weight_k)`
 
 ### L-functions
 
 46. `ModularForms.a_p(p, cardinality)`
+
+### p-adic Fields
+
+47. `ModularForms.padic_valuation(num_b10, p)`
+48. `ModularForms.padic_norm(num_b10, p)`
+49. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
+50. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
