@@ -22,7 +22,7 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
   - [💎 Installation](#%F0%9F%92%8E-installation)
   - [🧰 How to use?](#%F0%9F%A7%B0-how-to-use)
     - [🎶 Explore Fermat’s Last Theorem in Sonic Pi](#%F0%9F%8E%B6-explore-fermats-last-theorem-in-sonic-pi)
-    - [🎶 Combining the machinery organism - Warp Up](#%F0%9F%8E%B6-combining-the-machinery-organism---warp-up)
+    - [🎶 Merging Machine and Organism - Warp Up](#%F0%9F%8E%B6-merging-machine-and-organism---warp-up)
   - [🧩 Implemented Modular Forms, Elliptic Curves, and Related Definitions](#%F0%9F%A7%A9-implemented-modular-forms-elliptic-curves-and-related-definitions)
     - [Eisenstein Series](#eisenstein-series)
     - [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
@@ -143,7 +143,7 @@ live_loop :modularity_music do
 end
 ```
 
-### 🎶 Combining the machinery organism - Warp Up
+### 🎶 Merging Machine and Organism - Warp Up
 
 Unlike the structured Fermat example, this finite loop explores more abstract territory, using multiple concepts to create a sonic landscape that, while grounded in mathematical principles, goes beyond conventional musical forms.
 
