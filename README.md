@@ -11,34 +11,6 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
 
 [![Modular Forms - Image](https://raw.githubusercontent.com/edelveart/modular_forms/main/modular_forms.png)](https://rubygems.org/gems/modular_forms)
 
-📚 Table of Contents
-- [Modular Forms](#modular-forms)
-  - [⚙️ Project Status](#%E2%9A%99%EF%B8%8F-project-status)
-  - [🧊 Features](#%F0%9F%A7%8A-features)
-  - [💡 Purpose and Scope](#%F0%9F%92%A1-purpose-and-scope)
-    - [Overview](#overview)
-    - [Not Optimized for Computational Efficiency](#not-optimized-for-computational-efficiency)
-    - [Goal](#goal)
-  - [💎 Installation](#%F0%9F%92%8E-installation)
-  - [🧰 How to use?](#%F0%9F%A7%B0-how-to-use)
-    - [🎶 Explore Fermat’s Last Theorem in Sonic Pi](#%F0%9F%8E%B6-explore-fermats-last-theorem-in-sonic-pi)
-    - [🎶 Merging Machine and Organism - Warp Up](#%F0%9F%8E%B6-merging-machine-and-organism---warp-up)
-  - [🧩 Implemented Modular Forms, Elliptic Curves, and Related Definitions](#%F0%9F%A7%A9-implemented-modular-forms-elliptic-curves-and-related-definitions)
-    - [Eisenstein Series](#eisenstein-series)
-    - [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
-    - [Theta Functions](#theta-functions)
-    - [Ramanujan Tau Function](#ramanujan-tau-function)
-    - [J-Function](#j-function)
-    - [Hecke Operators](#hecke-operators)
-    - [SL(2,Z) Group](#sl2z-group)
-    - [Dirichlet Characters](#dirichlet-characters)
-    - [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
-    - [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)
-    - [Newform Invariants](#newform-invariants)
-    - [L-functions](#l-functions)
-    - [p-adic Fields](#p-adic-fields)
-  - [🧪 Testing](#%F0%9F%A7%AA-testing)
-
 ## ⚙️ Project Status
 
 This is a pre-alpha release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
