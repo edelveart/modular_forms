@@ -11,41 +11,72 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
 
 [![Modular Forms - Image](https://raw.githubusercontent.com/edelveart/modular_forms/main/modular_forms.png)](https://rubygems.org/gems/modular_forms)
 
+📚 Table of Contents
+- [Modular Forms](#modular-forms)
+  - [⚙️ Project Status](#%E2%9A%99%EF%B8%8F-project-status)
+  - [🧊 Features](#%F0%9F%A7%8A-features)
+  - [💡 Purpose and Scope](#%F0%9F%92%A1-purpose-and-scope)
+    - [Overview](#overview)
+    - [Not Optimized for Computational Efficiency](#not-optimized-for-computational-efficiency)
+    - [Goal](#goal)
+  - [💎 Installation](#%F0%9F%92%8E-installation)
+  - [🧰 How to use?](#%F0%9F%A7%B0-how-to-use)
+    - [🎶 Explore Fermat’s Last Theorem in Sonic Pi](#%F0%9F%8E%B6-explore-fermats-last-theorem-in-sonic-pi)
+    - [🎶 Combining the machinery organism - Warp Up](#%F0%9F%8E%B6-combining-the-machinery-organism---warp-up)
+  - [🧩 Implemented Modular Forms, Elliptic Curves, and Related Definitions](#%F0%9F%A7%A9-implemented-modular-forms-elliptic-curves-and-related-definitions)
+    - [Eisenstein Series](#eisenstein-series)
+    - [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
+    - [Theta Functions](#theta-functions)
+    - [Ramanujan Tau Function](#ramanujan-tau-function)
+    - [J-Function](#j-function)
+    - [Hecke Operators](#hecke-operators)
+    - [SL(2,Z) Group](#sl2z-group)
+    - [Dirichlet Characters](#dirichlet-characters)
+    - [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
+    - [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)
+    - [Newform Invariants](#newform-invariants)
+    - [L-functions](#l-functions)
+    - [p-adic Fields](#p-adic-fields)
+  - [🧪 Testing](#%F0%9F%A7%AA-testing)
+
 ## ⚙️ Project Status
 
 This is a pre-alpha release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
-Future updates might include a DSL, depending on how the library is used and the interest from the community.
 
-Contributions are welcome! Feel free to fork and submit a pull request.
+Future updates might include a DSL, depending on how the library is used and the interest from the community. A key challenge lies in creating musical mappings that stay true to the underlying mathematics while also sounding intentional, expressive, and naturally fitting within a musical structure.
 
 ## 🧊 Features
 
 - **Accessible to both musicians and coders**: No math expertise required. Create musical patterns, rhythms, timbres, and harmonies by experimenting with mathematical ideas and turning them into sound and effects intuitively.
 - **Interactive Educational Resource**: Use **Sonic Pi** to discover introductory number theory in a hands-on, immersive way, gaining insights into abstract concepts through math in action.
 
-### Purpose and Scope
+## 💡 Purpose and Scope
 
-Given the vastness of the field, this tool intentionally focuses on a limited subset of definitions, without covering all aspects of each. Below is a list of the implemented modules:
+### Overview
 
-- [Eisenstein Series](#eisenstein-series)
-- [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
-- [Theta Functions](#theta-functions)
-- [Ramanujan Tau Function](#ramanujan-tau-function)
-- [J-Function](#j-function)
-- [Hecke Operators](#hecke-operators)
-- [SL(2,Z) Group](#sl2z-group)
-- [Dirichlet Characters](#dirichlet-characters)
-- [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
-- [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)
-- [Newform Invariants](#newform-invariants)
-- [L-functions](#l-functions)
-- [p-adic Fields](#p-adic-fields)
+Given the vastness of the field, this tool intentionally focuses on a limited subset of definitions, without covering all aspects of each.
+
+- 🧩 List of implemented modules:
+  - [Eisenstein Series](#eisenstein-series)
+  - [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
+  - [Theta Functions](#theta-functions)
+  - [Ramanujan Tau Function](#ramanujan-tau-function)
+  - [J-Function](#j-function)
+  - [Hecke Operators](#hecke-operators)
+  - [SL(2,Z) Group](#sl2z-group)
+  - [Dirichlet Characters](#dirichlet-characters)
+  - [Elliptic Curves over Rationals](#elliptic-curves-over-rationals)
+  - [Elliptic Curves over Finite Fields](#elliptic-curves-over-finite-fields)
+  - [Newform Invariants](#newform-invariants)
+  - [L-functions](#l-functions)
+  - [p-adic Fields](#p-adic-fields)
 
 ### Not Optimized for Computational Efficiency
 
 This library is designed for creative exploration rather than maximum computational efficiency. It is **not intended** to replace specialized mathematical software optimized for heavy or large-scale computations. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
 
 ### Goal
+
 The goal is simple: to provide an accessible and creative starting point for those who wish to explore, learn, and uncover new ideas, regardless of their mathematical background.
 
 ## 💎 Installation
@@ -61,30 +92,19 @@ If you are **use Ruby**, then import via
 require 'modular_forms'
 ```
 
-If you are **using Sonic Pi**, replace `<PATH>` with the directory path to the `modular_forms.rb` file inside the gem installation on your system:
+If you are **using Sonic Pi**, replace `<PATH>` with the directory path to the `modular_forms.rb` file inside the gem installation on your system. You can find the full path by running:
+
+```bash
+gem which modular_forms
+```
+
+Then require the file like this:
 
 ```rb
 require "<PATH>/modular_forms.rb"
 ```
 
 ## 🧰 How to use?
-
-### 🎶 Play an Eisenstein Series as Music for Warm-Up
-
-Here is a simple example of how to use **modular_forms** to generate a basic musical pattern:
-
-```rb
-require "<PATH>/modular_forms.rb"
-
-# Generate an Eisenstein series of weight k = 4
-eisenstein_melody = ModularForms.eisenstein_series(4)
-
-# Play the melody in a loop with a mathematical transformation
-120.times do
-  play eisenstein_melody.next % 12 * 7
-  sleep 0.5
-end
-```
 
 ### 🎶 Explore Fermat’s Last Theorem in Sonic Pi
 
@@ -123,6 +143,43 @@ live_loop :modularity_music do
 end
 ```
 
+### 🎶 Combining the machinery organism - Warp Up
+
+Unlike the structured Fermat example, this finite loop explores more abstract territory, using multiple concepts to create a sonic landscape that, while grounded in mathematical principles, goes beyond conventional musical forms.
+
+```rb
+require "<PATH>/modular_forms.rb"
+
+eisenstein_melody = ModularForms.eisenstein_series(8)
+p = 3
+ellc = ModularForms.elliptic_curve_q([2, 5])
+disc = ModularForms.discriminant_q(ellc)
+e8 = eisenstein_melody.take(58)
+hecke_op = ModularForms.hecke_operator_prime_non_cusp(e8, p, 8, 20)
+j_func = ModularForms.j_function(40)
+newform_ac = ModularForms.analytic_conductor(15, 2)
+pol = ModularForms.def_pol_2deg(41)
+
+(disc * -1).times do
+  synth :subpulse, note: ModularForms.padic_valuation(eisenstein_melody.next, p) % 7 + 70,
+    release: 0.25 if (spread (disc % 6), 7).tick(:d)
+
+  synth :chiplead, note: hecke_op.tick(:tp) % 7 + 50,
+    release: newform_ac, attack: newform_ac
+
+  synth :fm, note: ModularForms.gauss_sum_triv(5, j_func.tick(:j)) + 51,
+    release: 0.25, attack: 0.012,
+    pan: ModularForms.analytic_conductor(j_func.look % 15, 4) * rrand_i(-1, 1) if
+  spread(ModularForms.gamma1_index(p), 11).tick(:g)
+
+  sample 90, release: 0.125 if pol.tick == 'x'
+  sample :ambi_drone, beat_stretch: 0.7 if pol.look == '*'
+  sample :bass_drop_c, release: 0.125 if pol.look == '6'
+
+  sleep ModularForms.padic_norm(p, p)
+end
+```
+
 ## 🧩 Implemented Modular Forms, Elliptic Curves, and Related Definitions
 
 ### Eisenstein Series
@@ -157,7 +214,7 @@ end
 13. `ModularForms.hecke_operator_prime_non_cusp(non_cusp_form_arr, prime, weight_k, prec)`
 14. `ModularForms.hecke_operator_prime_cusp(cusp_form_arr, prime, weight_k, prec)`
 
-### SL(2,ℤ) Group
+### SL(2,Z) Group
 
 15. `ModularForms.t_gen_matrix(n_power)`
 16. `ModularForms.s_gen_matrix(n_power)`
