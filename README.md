@@ -42,6 +42,7 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
   - [Newform Invariants](#newform-invariants)
   - [L-functions](#l-functions)
   - [p-adic Fields](#p-adic-fields)
+  - [Number Fields](#number-fields)
 
 ### Not Optimized for Computational Efficiency
 
@@ -242,6 +243,10 @@ end
 48. `ModularForms.padic_norm(num_b10, p)`
 49. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
 50. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
+
+### Number Fields
+
+51. `ModularForms.zeta_coeffs_deg2(dirichlet_char_group, n)`
 
 ## 🧪 Testing
 
