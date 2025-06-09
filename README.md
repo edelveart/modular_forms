@@ -123,17 +123,29 @@ Unlike the structured Fermat example, this finite loop explores more abstract te
 ```rb
 require "<PATH>/modular_forms.rb"
 
-eisenstein_melody = ModularForms.eisenstein_series(8)
 p = 3
-ellc = ModularForms.elliptic_curve_q([2, 5])
-disc = ModularForms.discriminant_q(ellc)
+eisenstein_melody = ModularForms.eisenstein_series(8)
 e8 = eisenstein_melody.take(58)
 hecke_op = ModularForms.hecke_operator_prime_non_cusp(e8, p, 8, 20)
+
+ellc = ModularForms.elliptic_curve_q([2, 5])
+disc = ModularForms.discriminant_q(ellc)
+
 j_func = ModularForms.j_function(40)
 newform_ac = ModularForms.analytic_conductor(15, 2)
 pol = ModularForms.def_pol_2deg(41)
 
+x = 7
+dirichlet_char_group = []
+(1..x).each do |i|
+  dirichlet_char_group << ModularForms.conrey_p_pminus1(x, i)
+end
+
 (disc * -1).times do
+  synth :zawa,
+    note: ModularForms.zeta_coeffs_deg2(dirichlet_char_group, 30)
+  .tick(:zeta) + 72, amp: rrand(0.3, 0.6)
+
   synth :subpulse, note: ModularForms.padic_valuation(eisenstein_melody.next, p) % 7 + 70,
     release: 0.25 if (spread (disc % 6), 7).tick(:d)
 
