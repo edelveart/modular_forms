@@ -212,4 +212,8 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
   def def_pol_2deg(p = 2, c = 0, num = 1)
     Core::PAdicFields.def_pol_2deg(p, c, num)
   end
+
+  def zeta_coeffs_deg2(dirichlet_char_group, n)
+    Core::NumberFields.zeta_coeffs_deg2(dirichlet_char_group, n)
+  end
 end
