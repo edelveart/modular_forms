@@ -3,32 +3,33 @@
 A creative toolkit for exploring modular forms and elliptic curves through [Sonic Pi](https://sonic-pi.net/).
 
 <p align="center">
-  <img src="https://img.shields.io/gem/v/modular_forms" alt="Gem Version">
-  <img src="https://img.shields.io/gem/dt/modular_forms" alt="Gem Total Downloads">
-  <img src="https://img.shields.io/github/stars/edelveart/modular_forms" alt="GitHub Repo stars">
-  <img src="https://img.shields.io/github/license/edelveart/modular_forms" alt="GitHub License">
+  <img src="https://img.shields.io/gem/v/modular_forms" alt="Gem Version" />
+  <img src="https://img.shields.io/gem/dt/modular_forms" alt="Gem Total Downloads" />
+  <img src="https://img.shields.io/github/stars/edelveart/modular_forms" alt="GitHub Repo stars" />
 </p>
 
-[![Modular Forms - Image](https://raw.githubusercontent.com/edelveart/modular_forms/main/modular_forms.png)](https://rubygems.org/gems/modular_forms)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/edelveart/modular_forms/main/modular_forms.png" width="400" alt="Modular Forms Image" />
+</p>
 
-## ⚙️ Project Status
+## Project Status
 
 This is a pre-alpha release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
 
 Future updates might include a DSL, depending on how the library is used and the interest from the community. A key challenge lies in creating musical mappings that stay true to the underlying mathematics while also sounding intentional, expressive, and naturally fitting within a musical structure.
 
-## 🧊 Features
+## Features
 
 - **Accessible to both musicians and coders**: No math expertise required. Create musical patterns, rhythms, timbres, and harmonies by experimenting with mathematical ideas and turning them into sound and effects intuitively.
 - **Interactive Educational Resource**: Use **Sonic Pi** to discover introductory number theory in a hands-on, immersive way, gaining insights into abstract concepts through math in action.
 
-## 💡 Purpose and Scope
+##  Purpose and Scope
 
 ### Overview
 
 Given the vastness of the field, this tool intentionally focuses on a limited subset of definitions, without covering all aspects of each.
 
-- 🧩 List of implemented modules:
+- List of implemented modules:
   - [Eisenstein Series](#eisenstein-series)
   - [Eta Functions and Eta Quotients](#eta-functions-and-eta-quotients)
   - [Theta Functions](#theta-functions)
@@ -52,7 +53,7 @@ This library is designed for creative exploration rather than maximum computatio
 
 The goal is simple: to provide an accessible and creative starting point for those who wish to explore, learn, and uncover new ideas, regardless of their mathematical background.
 
-## 💎 Installation
+## Installation
 
 You can install the `modular_forms` gem directly from **RubyGems** or clone it from GitHub.
 
@@ -77,9 +78,9 @@ Then require the file like this:
 require "<PATH>/modular_forms.rb"
 ```
 
-## 🧰 How to use?
+## How to use?
 
-### 🎶 Explore Fermat’s Last Theorem in Sonic Pi
+### Explore Fermat’s Last Theorem in Sonic Pi
 
 The Taniyama–Shimura Conjecture (now the Modularity Theorem), proven for semistable cases by Andrew Wiles, connects elliptic curves over the rationals to modular forms. This profound result was crucial in proving **Fermat’s Last Theorem**.
 
@@ -116,7 +117,7 @@ live_loop :modularity_music do
 end
 ```
 
-### 🎶 Merging Machine and Organism - Warp Up
+### Merging Machine and Organism - Warp Up
 
 Unlike the structured Fermat example, this finite loop explores more abstract territory, using multiple concepts to create a sonic landscape that, while grounded in mathematical principles, goes beyond conventional musical forms.
 
@@ -165,7 +166,7 @@ end
 end
 ```
 
-## 🧩 Implemented Modular Forms, Elliptic Curves, and Related Definitions
+## Implemented Modular Forms, Elliptic Curves, and Related Definitions
 
 ### Eisenstein Series
 
@@ -260,7 +261,7 @@ end
 
 51. `ModularForms.zeta_coeffs_deg2(dirichlet_char_group, n)`
 
-## 🧪 Testing
+## Testing
 
 Install dependencies first:
 
