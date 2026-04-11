@@ -7,16 +7,35 @@ module ModularForms
     # ModularForms::Core::EllipticCurves
     #
     # This module provides methods for generating points on Elliptic Curves (short Weierstrass form) over Q
-    module EllipticCurvesQ
+    module EllipticCurvesQ # rubocop:disable Metrics/ModuleLength
       def self.discriminant(a, b)
         -16 * (4 * a**3 + 27 * b**2)
       end
 
+      def self.show_curve_equation(a, b) # rubocop:disable Metrics/MethodLength,Lint/RedundantCopDisableDirective
+        eq = 'y^2 = x^3'
+        eq += a != 0 ? " #{a > 0 ? '+' : '-'} #{a.abs}x" : '' # rubocop:disable Style/NestedTernaryOperator,Style/NumericPredicate
+        eq += b != 0 ? " #{b > 0 ? '+' : '-'} #{b.abs}" : '' # rubocop:disable Style/NestedTernaryOperator,Style/NumericPredicate
+        eq
+      end
+
+      def self.singular?(a, b)
+        delta = discriminant(a, b)
+        return unless delta.zero?
+
+        type = begin
+          x_s = a.zero? ? 0 : Math.sqrt(-a / 3) rescue 0 # rubocop:disable Style/RescueModifier
+          x_s.zero? ? 'cusp' : 'node'
+        end
+
+        # Concatenar la ecuación directamente en el mensaje
+        raise "#{show_curve_equation(a, b)} defines a singular curve (#{type})"
+      end
+
       def self.elliptic_curve_q(coefs)
         a, b = coefs
-        raise "y^2=x^3 #{a}x #{b} defines a singular curve" if discriminant(a, b) == 0 # rubocop:disable Style/NumericPredicate
-
-        puts "y^2 = x^3 #{a}x #{b}"
+        singular?(a, b)
+        puts show_curve_equation(a, b)
         { a: a, b: b }
       end
 
@@ -126,3 +145,6 @@ module ModularForms
     end
   end
 end
+# # [-1, 2],
+# ModularForms::Core::EllipticCurvesQ.elliptic_curve_q([-27, 54])
+# # ModularForms::Core::EllipticCurvesQ.show_curve_equation([-0, 0])

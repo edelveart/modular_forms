@@ -13,7 +13,7 @@ module ModularForms
         ((n % modp) + modp) % modp
       end
 
-      def self.elliptic_curve_fp(p, coefs)
+      def self.elliptic_curve_fp(p, coefs) # rubocop:disable Metrics/MethodLength
         a, b = coefs
         raise "#{p} is not a prime number" if NumericHelpers.prime_number?(p) == false
 
@@ -21,9 +21,13 @@ module ModularForms
 
         a_modp = reduction_modp(a, p)
         b_modp = reduction_modp(b, p)
-        raise "y^2=x^3 #{a_modp}x #{b_modp} defines a singular curve" if d == 0 # rubocop:disable Style/NumericPredicate
 
-        puts "y^2 = x^3 #{a_modp}x #{b_modp} over Finite Field #{p}"
+        if d.zero?
+          raise "#{EllipticCurvesQ.show_curve_equation(a_modp,
+                                                       b_modp)} defines a singular curve over F_#{p}"
+        end
+
+        puts "#{EllipticCurvesQ.show_curve_equation(a_modp, b_modp)} over Finite Field #{p}"
         { a: a, b: b, p: p }
       end
 
