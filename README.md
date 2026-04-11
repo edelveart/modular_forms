@@ -4,6 +4,7 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
 
 <p align="center">
   <img src="https://img.shields.io/gem/v/modular_forms" alt="Gem Version" />
+  <a href="https://doi.org/10.5281/zenodo.19503416"><img src="https://zenodo.org/badge/969412995.svg" alt="DOI"></a>
   <img src="https://img.shields.io/gem/dt/modular_forms" alt="Gem Total Downloads" />
   <img src="https://img.shields.io/github/stars/edelveart/modular_forms" alt="GitHub Repo stars" />
 </p>
@@ -12,11 +13,16 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
   <img src="https://raw.githubusercontent.com/edelveart/modular_forms/main/modular_forms.png" width="400" alt="Modular Forms Image" />
 </p>
 
+
 ## Project Status
 
 This is a **pre-alpha** release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
 
 Future updates might include a **DSL**, depending on how the library is used and the interest from the community. A key challenge lies in transforming mathematics into music that feels intentional, expressive, and naturally musical.
+
+#### Collaboration
+
+> If you use **modular_forms** in research or creative projects, I’d be delighted to hear from you and collaborate. Cite via [**Zenodo**](https://doi.org/10.5281/zenodo.19503416) or reach out through [**my website**](https://edelveart.github.io/).
 
 ## Features
 
@@ -45,7 +51,7 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 
 ### Not Optimized for Computational Efficiency
 
-> This library is designed for creative exploration rather than maximum computational efficiency. It is **not intended** to replace specialized mathematical software optimized for heavy or large-scale computations. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
+This library is designed for creative exploration rather than maximum computational efficiency. It is **not intended** to replace specialized mathematical software optimized for heavy or large-scale computations. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
 
 
 ## Installation
