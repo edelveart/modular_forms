@@ -14,18 +14,16 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
 
 ## Project Status
 
-This is a pre-alpha release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
+This is a **pre-alpha** release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
 
-Future updates might include a DSL, depending on how the library is used and the interest from the community. A key challenge lies in creating musical mappings that stay true to the underlying mathematics while also sounding intentional, expressive, and naturally fitting within a musical structure.
+Future updates might include a **DSL**, depending on how the library is used and the interest from the community. A key challenge is turning mathematical ideas into music that feels deliberate, expressive, and naturally musical.
 
 ## Features
 
 - **Accessible to both musicians and coders**: No math expertise required. Create musical patterns, rhythms, timbres, and harmonies by experimenting with mathematical ideas and turning them into sound and effects intuitively.
 - **Interactive Educational Resource**: Use **Sonic Pi** to discover introductory number theory in a hands-on, immersive way, gaining insights into abstract concepts through math in action.
 
-##  Purpose and Scope
-
-### Overview
+##  Scope
 
 Given the vastness of the field, this tool intentionally focuses on a limited subset of definitions, without covering all aspects of each.
 
@@ -47,11 +45,8 @@ Given the vastness of the field, this tool intentionally focuses on a limited su
 
 ### Not Optimized for Computational Efficiency
 
-This library is designed for creative exploration rather than maximum computational efficiency. It is **not intended** to replace specialized mathematical software optimized for heavy or large-scale computations. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
+> This library is designed for creative exploration rather than maximum computational efficiency. It is **not intended** to replace specialized mathematical software optimized for heavy or large-scale computations. Instead, it draws inspiration from tools like **SageMath**, **Pari/GP**, and the **LMFDB database**.
 
-### Goal
-
-The goal is simple: to provide an accessible and creative starting point for those who wish to explore, learn, and uncover new ideas, regardless of their mathematical background.
 
 ## Installation
 
@@ -223,43 +218,44 @@ end
 27. `ModularForms.discriminant_q(curve)`
 28. `ModularForms.j_invariant_q(curve)`
 29. `ModularForms.point_on_curve_q?(curve, point)`
-30. `ModularForms.point_addition_q(curve, p, q)`
-31. `ModularForms.scalar_mul_point_q(curve, n, point)`
-32. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
-33. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
-34. `ModularForms.weil_height(x_point)`
-35. `ModularForms.canonical_height(curve, point, prec = 64)`
+30. `ModularForms.negate_p(point)`
+31. `ModularForms.point_addition_q(curve, p, q)`
+32. `ModularForms.scalar_mul_point_q(curve, n, point)`
+33. `ModularForms.isogeny_2deg_q(curve, point_2tor)`
+34. `ModularForms.isogeny_ndeg_q(curve, point_ntor, order)`
+35. `ModularForms.weil_height(x_point)`
+36. `ModularForms.canonical_height(curve, point, prec = 64)`
 
 ### Elliptic Curves over Finite Fields
 
-36. `ModularForms.elliptic_curve_fp(p, coefs)`
-37. `ModularForms.point_on_curve_modp?(curve, point)`
-38. `ModularForms.discriminant_modp(curve)`
-39. `ModularForms.j_invariant_modp(curve)`
-40. `ModularForms.point_addition_modp(curve, p_point, q_point)`
-41. `ModularForms.scalar_mul_point_modp(curve, n, point)`
-42. `ModularForms.points_fp(curve, point_at_infinity = false)`
-43. `ModularForms.cardinality_fp(curve)`
-44. `ModularForms.quadratic_twist_fp(curve)`
+37. `ModularForms.elliptic_curve_fp(p, coefs)`
+38. `ModularForms.point_on_curve_modp?(curve, point)`
+39. `ModularForms.discriminant_modp(curve)`
+40. `ModularForms.j_invariant_modp(curve)`
+41. `ModularForms.point_addition_modp(curve, p_point, q_point)`
+42. `ModularForms.scalar_mul_point_modp(curve, n, point)`
+43. `ModularForms.points_fp(curve, point_at_infinity = false)`
+44. `ModularForms.cardinality_fp(curve)`
+45. `ModularForms.quadratic_twist_fp(curve)`
 
 ### Newform Invariants
 
-45. `ModularForms.analytic_conductor(level_n, weight_k)`
+46. `ModularForms.analytic_conductor(level_n, weight_k)`
 
 ### L-functions
 
-46. `ModularForms.a_p(p, cardinality)`
+47. `ModularForms.a_p(p, cardinality)`
 
 ### p-adic Fields
 
-47. `ModularForms.padic_valuation(num_b10, p)`
-48. `ModularForms.padic_norm(num_b10, p)`
-49. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
-50. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
+48. `ModularForms.padic_valuation(num_b10, p)`
+49. `ModularForms.padic_norm(num_b10, p)`
+50. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
+51. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
 
 ### Number Fields
 
-51. `ModularForms.zeta_coeffs_deg2(dirichlet_char_group, n)`
+52. `ModularForms.zeta_coeffs_deg2(dirichlet_char_group, n)`
 
 ## Testing
 
