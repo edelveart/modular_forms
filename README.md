@@ -16,7 +16,7 @@ A creative toolkit for exploring modular forms and elliptic curves through [Soni
 
 This is a **pre-alpha** release of `modular_forms`. At this stage, only a subset of core mathematical definitions and operations is implemented.
 
-Future updates might include a **DSL**, depending on how the library is used and the interest from the community. A key challenge is turning mathematical ideas into music that feels deliberate, expressive, and naturally musical.
+Future updates might include a **DSL**, depending on how the library is used and the interest from the community. A key challenge lies in transforming mathematics into music that feels intentional, expressive, and naturally musical.
 
 ## Features
 
