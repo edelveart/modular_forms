@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 ruby '3.3.7'
-
+gemspec
 # Ruby LSP
 
 group :development do

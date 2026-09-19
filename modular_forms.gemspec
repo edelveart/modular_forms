@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   }
 
   s.required_ruby_version = '>= 3.0.0'
+  s.add_dependency 'prime'
 
   s.extra_rdoc_files = Dir['README.md', 'LICENSE']
   s.rdoc_options    += [
