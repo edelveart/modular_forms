@@ -197,6 +197,10 @@ module ModularForms # rubocop:disable Metrics/ModuleLength
     Core::LFunctions.a_p(p, cardinality)
   end
 
+  def good_reduction_ap_list(curve)
+    Core::LFunctions.good_reduction_ap(curve)
+  end
+
   def padic_valuation(num_b10, p)
     Core::PAdicFields.padic_valuation(num_b10, p)
   end
