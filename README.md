@@ -251,17 +251,18 @@ end
 ### L-functions
 
 47. `ModularForms.a_p(p, cardinality)`
+48. `ModularForms.good_reduction_ap_list(curve)`
 
 ### p-adic Fields
 
-48. `ModularForms.padic_valuation(num_b10, p)`
-49. `ModularForms.padic_norm(num_b10, p)`
-50. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
-51. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
+49. `ModularForms.padic_valuation(num_b10, p)`
+50. `ModularForms.padic_norm(num_b10, p)`
+51. `ModularForms.padic_expansion(num_b10, p, prec = 11, reverse_trim = false)`
+52. `ModularForms.def_pol_2deg(p = 2, c = 0, num = 1)`
 
 ### Number Fields
 
-52. `ModularForms.zeta_coeffs_deg2(dirichlet_char_group, n)`
+53. `ModularForms.zeta_coeffs_deg2(dirichlet_char_group, n)`
 
 ## Testing
 
